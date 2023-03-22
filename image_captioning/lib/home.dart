@@ -86,10 +86,8 @@ class homeScene extends StatelessWidget {
               onPressed: () {
                 Navigator.of(context).push(SlideAnimation(
                     page: firstScene(),
-                    begin_x: 1,
-                    begin_y: 0,
-                    end_x: 0,
-                    end_y: 0));
+                    beginX: 1,
+                    ));
               },
               child: Text('Second Screen'),
               style: ElevatedButton.styleFrom(
@@ -99,7 +97,8 @@ class homeScene extends StatelessWidget {
             ElevatedButton(
               onPressed: () async {
                  await availableCameras().then((value) =>
-                        Navigator.of(context).push(SlideAnimation(begin_x: 1, begin_y: 0, end_x: 0, end_y: 0,
+                        Navigator.of(context).push(SlideAnimation(
+                            beginX: 1,
                             page: CameraPage(cameras: value))
                         ),
                     );
