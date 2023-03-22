@@ -71,7 +71,9 @@ class _CameraPageState extends State<CameraPage> {
         body: SafeArea(
           child: Stack(children: [
             (_cameraController.value.isInitialized)
-                ? CameraPreview(_cameraController)
+                ? Container(
+                width: double.infinity,
+                child: CameraPreview(_cameraController))
                 : Container(
                 color: Colors.black,
                 child: const Center(child: CircularProgressIndicator())),
