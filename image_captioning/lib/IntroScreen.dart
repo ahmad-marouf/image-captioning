@@ -57,10 +57,10 @@ class IntroScreen extends StatelessWidget {
       onDone: () {
         Navigator.of(context).pushReplacement(SlideAnimation(
           page: homeState(),
-          begin_x: 0,
-          begin_y: 0,
-          end_x: 0,
-          end_y: 0,
+          beginX: 0,
+          beginY: 0,
+          endX: 0,
+          endY: 0,
         ));
       },
       dotsDecorator: DotsDecorator(

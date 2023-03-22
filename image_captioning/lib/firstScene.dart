@@ -35,10 +35,7 @@ class firstScene extends StatelessWidget{
       onPressed: (){
         Navigator.of(context).pop(SlideAnimation(
             page: page,
-            begin_x: -1,
-            begin_y: 0,
-            end_x: 0,
-            end_y: 0
+            beginX: -1,
         ));
       },
       style: buttonStyle(),  //stylefrom

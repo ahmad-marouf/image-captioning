@@ -52,7 +52,9 @@ class SplashState extends State<Splash> with AfterLayoutMixin<Splash> {
     }*/
 
     Navigator.of(context).pushReplacement(
-        new MaterialPageRoute(builder: (context) => new IntroScreen()));
+        new MaterialPageRoute(builder: (context) => new IntroScreen()
+        )
+    );
 
   }
 
