@@ -3,9 +3,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:image_captioning/slideAnimation.dart';
 import 'preview_page.dart';
-import 'home.dart';
+import 'package:flutter/services.dart';
 
 class CameraPage extends StatefulWidget {
+
+
   const CameraPage({Key? key, required this.cameras}) : super(key: key);
 
   final List<CameraDescription>? cameras;
@@ -27,6 +29,10 @@ class _CameraPageState extends State<CameraPage> {
   @override
   void initState() {
     super.initState();
+    SystemChrome.setEnabledSystemUIMode(
+        SystemUiMode.manual,
+        overlays: [SystemUiOverlay.bottom]
+    );
     initCamera(widget.cameras![0]);
   }
 
@@ -100,7 +106,8 @@ class _CameraPageState extends State<CameraPage> {
                                     () => _isRearCameraSelected = !_isRearCameraSelected);
                             initCamera(widget.cameras![_isRearCameraSelected ? 0 : 1]);
                           },
-                        )),
+                        )
+                    ),
                     Expanded(
                         child: IconButton(
                           onPressed: takePicture,
@@ -108,11 +115,14 @@ class _CameraPageState extends State<CameraPage> {
                           padding: EdgeInsets.zero,
                           constraints: const BoxConstraints(),
                           icon: const Icon(Icons.circle, color: Colors.white),
-                        )),
+                        )
+                    ),
                     const Spacer(),
                   ]),
-                )),
+                )
+            ),
           ]),
-        ));
+        )
+    );
   }
 }
