@@ -14,8 +14,8 @@ class SlideAnimation extends PageRouteBuilder{
       Offset begin = Offset(beginX,beginY);
       Offset end = Offset(endX,endY);
       Curve curve = Curves.ease;
-      var tween = Tween(begin:begin ,end:end ).chain(CurveTween(curve: curve));
-      var offsetAnimation = animation.drive(tween);
+      Animatable<Offset> tween = Tween(begin:begin ,end:end ).chain(CurveTween(curve: curve));
+      Animation<Offset> offsetAnimation = animation.drive(tween);
       return SlideTransition(position: offsetAnimation,
         child: child,
       );

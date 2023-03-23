@@ -4,14 +4,20 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c0cf96fa-60fe-4e56-b251-04010795af08" name="Changes" comment="change the dimensions of camera to fit the resolution of the mobile">
-      <change afterPath="$PROJECT_DIR$/image_captioning/android/app/src/main/res/mipmap-hdpi/launcher_icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/image_captioning/android/app/src/main/res/mipmap-mdpi/launcher_icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/image_captioning/android/app/src/main/res/mipmap-xhdpi/launcher_icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/image_captioning/android/app/src/main/res/mipmap-xxhdpi/launcher_icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/image_captioning/android/app/src/main/res/mipmap-xxxhdpi/launcher_icon.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/image_captioning/android/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/image_captioning/android/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/image_captioning/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/image_captioning/pubspec.lock" afterDir="false" />
+    <list default="true" id="c0cf96fa-60fe-4e56-b251-04010795af08" name="Changes" comment="hide the status bar in the camera_page.dart">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/image_captioning.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/image_captioning.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_captioning/lib/IntroScreen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/image_captioning/lib/IntroScreen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_captioning/lib/camera_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/image_captioning/lib/camera_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_captioning/lib/home.dart" beforeDir="false" afterPath="$PROJECT_DIR$/image_captioning/lib/home.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_captioning/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/image_captioning/lib/main.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_captioning/lib/preview_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/image_captioning/lib/preview_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_captioning/lib/slideAnimation.dart" beforeDir="false" afterPath="$PROJECT_DIR$/image_captioning/lib/slideAnimation.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,14 +41,19 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ASKED_ADD_EXTERNAL_FILES": "true",
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.cidr.known.project.marker": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "cidr.known.project.marker": "true",
     "dart.analysis.tool.window.visible": "false",
     "io.flutter.reload.alreadyRun": "true",
     "last_opened_file_path": "C:/Users/karim/StudioProjects/image_captioning",
-    "settings.editor.selected.configurable": "AndroidSdkUpdater",
+    "project.structure.last.edited": "SDKs",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "flutter.settings",
     "show.migrate.to.gradle.popup": "false"
   }
 }]]></component>
@@ -75,7 +86,49 @@
       <option name="project" value="LOCAL" />
       <updated>1679445122770</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="add application icon">
+      <created>1679445941973</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1679445941973</updated>
+    </task>
+    <task id="LOCAL-00004" summary="modify the parameter to put the dimension only you want to modify (default is zero)">
+      <created>1679517996881</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1679517996881</updated>
+    </task>
+    <task id="LOCAL-00005" summary="put animation on the preview page">
+      <created>1679518056248</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1679518056248</updated>
+    </task>
+    <task id="LOCAL-00006" summary="change the slideAnimation parameter">
+      <created>1679518092184</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1679518092184</updated>
+    </task>
+    <task id="LOCAL-00007" summary="change the slideAnimation parameter">
+      <created>1679518102253</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1679518102253</updated>
+    </task>
+    <task id="LOCAL-00008" summary="hide the status bar in the camera_page.dart">
+      <created>1679519232205</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1679519232205</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -93,6 +146,11 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="organize the project" />
     <MESSAGE value="change the dimensions of camera to fit the resolution of the mobile" />
-    <option name="LAST_COMMIT_MESSAGE" value="change the dimensions of camera to fit the resolution of the mobile" />
+    <MESSAGE value="add application icon" />
+    <MESSAGE value="modify the parameter to put the dimension only you want to modify (default is zero)" />
+    <MESSAGE value="put animation on the preview page" />
+    <MESSAGE value="change the slideAnimation parameter" />
+    <MESSAGE value="hide the status bar in the camera_page.dart" />
+    <option name="LAST_COMMIT_MESSAGE" value="hide the status bar in the camera_page.dart" />
   </component>
 </project>
