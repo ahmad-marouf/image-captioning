@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:image_captioning/slideAnimation.dart';
 import 'firstScene.dart';
 import 'camera_page.dart';
@@ -6,6 +7,7 @@ import 'package:camera/camera.dart';
 
 class homeState extends StatefulWidget {
   const homeState({Key? key}) : super(key: key);
+
 
   @override
   State<homeState> createState() => _homeState();
@@ -17,6 +19,7 @@ class _homeState extends State<homeState> {
   @override
   Widget build(BuildContext context) => WillPopScope(
     onWillPop: () async {
+
       DateTime now = DateTime.now();
 
       if (_currentBackPressTime == null ||
@@ -34,6 +37,7 @@ class _homeState extends State<homeState> {
     child: homeScene(),
   );
 }
+
 
 class homeScene extends StatelessWidget {
   const homeScene({super.key});

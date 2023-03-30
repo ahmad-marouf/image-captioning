@@ -23,6 +23,10 @@ class _CameraPageState extends State<CameraPage> {
   @override
   void dispose() {
     _cameraController.dispose();
+    SystemChrome.setEnabledSystemUIMode(
+        SystemUiMode.manual,
+        overlays: SystemUiOverlay.values
+    );
     super.dispose();
   }
 

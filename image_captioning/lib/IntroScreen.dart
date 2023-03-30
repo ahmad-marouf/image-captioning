@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:image_captioning/slideAnimation.dart';
 import 'home.dart';
 import 'package:introduction_screen/introduction_screen.dart';
@@ -44,6 +45,7 @@ class IntroScreen extends StatelessWidget {
         child: const Text("Let's Go!"),
       ),
     )];
+
 
   @override
   Widget build(BuildContext context) {
