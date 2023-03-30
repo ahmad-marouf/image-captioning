@@ -10,7 +10,7 @@ class FeatureExtractor {
   /// Instance of Interpreter
   Interpreter? _interpreter;
 
-  static const String MODEL_FILE_NAME = "resnet101.tflite";
+  static const String MODEL_FILE_NAME = "tflite_models/resnet101.tflite";
 
   /// Shapes of output tensors
   late List<List<int>> _outputShapes;
