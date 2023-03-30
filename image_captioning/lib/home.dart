@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:fluttertoast/fluttertoast.dart';
 import 'package:image_captioning/slideAnimation.dart';
 import 'firstScene.dart';
 import 'camera_page.dart';

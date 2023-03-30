@@ -33,7 +33,22 @@ dependencies:
 
   introduction_screen: ^3.1.6
   shared_preferences: ^2.0.18
-  camera: ^0.10.3+2
+  camera: ^0.9.6 # ^0.10.3+2 # downgraded for compatibility with tflite_flutter_helper
+
+  # packages used for bluetooth
+  flutter_bluetooth_serial: ^0.4.0
+  permission_handler: ^10.2.0
+  dropdown_formfield: ^0.1.4
+  photo_view: ^0.14.0
+  flutter_svprogresshud: ^1.0.0
+
+  # packages used for model
+  tflite_flutter: ^0.9.0
+  tflite_flutter_helper: # ^0.3.1
+    git:
+      url: https://github.com/elephantum/tflite_flutter_helper.git
+      ref: a7d7a59a33f7cffa0a2a12ab05625807622cc97a
+  image: ^3.0.2
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
@@ -42,7 +57,7 @@ dependencies:
   fluttertoast: ^8.2.1
 
 dev_dependencies:
-  flutter_launcher_icons: "^0.12.0"
+  flutter_launcher_icons: "^0.9.1" # "^0.12.0" # downgraded for compatibility with image: ^3.0.2
   flutter_test:
     sdk: flutter
 
