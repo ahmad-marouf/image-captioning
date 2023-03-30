@@ -33,7 +33,7 @@ dependencies:
 
   introduction_screen: ^3.1.6
   shared_preferences: ^2.0.18
-  camera: ^0.9.6 # ^0.10.3+2 # downgraded for compatibility with tflite_flutter_helper
+  camera: ^0.9.8+1 # ^0.10.3+2 # downgraded for compatibility with tflite_flutter_helper
 
   # packages used for bluetooth
   flutter_bluetooth_serial: ^0.4.0
@@ -55,6 +55,13 @@ dependencies:
   cupertino_icons: ^1.0.2
   after_layout: ^1.2.0
   fluttertoast: ^8.2.1
+
+dependency_overrides:
+  camera_android:
+    git:
+      url: https://github.com/bottlepay/plugins.git
+      path: packages/camera/camera_android
+      ref: e1a4dba770da9bc3cf9f858bac6837083f8b9059
 
 dev_dependencies:
   flutter_launcher_icons: "^0.9.1" # "^0.12.0" # downgraded for compatibility with image: ^3.0.2
