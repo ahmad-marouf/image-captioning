@@ -5,6 +5,9 @@ import 'firstScene.dart';
 import 'camera_page.dart';
 import 'package:camera/camera.dart';
 
+import 'package:image_captioning/model/decoder.dart';
+import 'package:image_captioning/model/encoder.dart';
+
 class homeState extends StatefulWidget {
   const homeState({Key? key}) : super(key: key);
 
@@ -110,8 +113,13 @@ class homeScene extends StatelessWidget {
               style: ElevatedButton.styleFrom(),
             ),
             ElevatedButton(
-              onPressed: () {
-                Navigator.pushNamed(context, 'first');
+              onPressed: () async {
+                // Navigator.pushNamed(context, 'first');
+                Encoder encoder = await Encoder.instance;
+                Decoder decoder = await Decoder.instance;
+                var result = await encoder.predict('image/test_model_1.jpg');
+                var caption = await decoder.predict(result!);
+                print(caption);
               },
               child: Text('Second Screen'),
               style: ElevatedButton.styleFrom(),
