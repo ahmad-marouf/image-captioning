@@ -42,4 +42,13 @@ Widget defaultButton({
   ),
 );
 
-
+Widget defaultElevatedButton({
+  required String text,
+  bool isUpperCase=true,
+  required VoidCallback function,
+})=>ElevatedButton(
+    onPressed: function,
+    child: Text(
+      isUpperCase ? text.toUpperCase() : text,
+    ),
+);

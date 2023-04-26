@@ -1,13 +1,24 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:image_captioning/firstScene.dart';
 import 'package:image_captioning/main.dart';
 import 'package:image_captioning/shared_coponents.dart';
 import 'package:image_captioning/slideAnimation.dart';
 import 'home.dart';
 import 'package:introduction_screen/introduction_screen.dart';
 
-class IntroScreen extends StatelessWidget {
+class IntroScreen extends StatefulWidget {
    IntroScreen({Key? key});
+
+  @override
+  State<IntroScreen> createState() => _IntroScreenState();
+}
+
+class _IntroScreenState extends State<IntroScreen> {
+  void navigateToFirstScreen(){
+    Navigator.push(context,
+        MaterialPageRoute(builder: (context)=> firstScene()));
+  }
 
   List<PageViewModel> listPagesViewModel = [
     PageViewModel(
@@ -43,15 +54,10 @@ class IntroScreen extends StatelessWidget {
       footer: defaultButton(
           text: 'let\'s go',
           function: (){
-            Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context)=>Splash()
-                ),
-            );
+
           }
       ),
     )];
-
 
   @override
   Widget build(BuildContext context) {

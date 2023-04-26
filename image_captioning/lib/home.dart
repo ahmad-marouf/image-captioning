@@ -91,11 +91,11 @@ class homeScene extends StatelessWidget {
             ElevatedButton(
               onPressed: () {
                 Navigator.of(context).push(SlideAnimation(
-                    page: firstScene(),
+                    page: const firstScene(),
                     beginX: 1,
                     ));
               },
-              child: Text('Second Screen'),
+              child:  Text('Second Screen'),
               style: ElevatedButton.styleFrom(
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(8))),
