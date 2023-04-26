@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:image_captioning/main.dart';
+import 'package:image_captioning/shared_coponents.dart';
 import 'package:image_captioning/slideAnimation.dart';
 import 'home.dart';
 import 'package:introduction_screen/introduction_screen.dart';
@@ -38,11 +40,15 @@ class IntroScreen extends StatelessWidget {
     PageViewModel(
       title: "Title of custom button page",
       body: "This is a description on a page with a custom button below.",
-      footer: ElevatedButton(
-        onPressed: () {
-          // On button pressed
-        },
-        child: const Text("Let's Go!"),
+      footer: defaultButton(
+          text: 'let\'s go',
+          function: (){
+            Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context)=>Splash()
+                ),
+            );
+          }
       ),
     )];
 

@@ -28,7 +28,6 @@ class firstScene extends StatelessWidget{
     );
   }
 
-
   button({context,text,page}){
     return ElevatedButton(
       child: Text(text),
@@ -40,9 +39,7 @@ class firstScene extends StatelessWidget{
       },
       style: buttonStyle(),  //stylefrom
     );
-
   }
-
 
   buttonStyle(){
     return ElevatedButton.styleFrom(
