@@ -7,6 +7,7 @@ import 'package:rive/rive.dart';
 Widget defaultButton({
   //required Function function,
   double width=double.infinity,
+  double height=double.infinity,
   Color backGroundColor= Colors.blue,
   bool isUpperCase=true,
   Icon? icon,
@@ -14,7 +15,7 @@ Widget defaultButton({
   required VoidCallback function,
 
 })=>Container(
-  width:width,
+  width:width,height: height,
   child: MaterialButton(
     shape: RoundedRectangleBorder(
       borderRadius: BorderRadius.circular(10),
@@ -64,7 +65,7 @@ Widget defaultButton({
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children:[
-              //RiveAnimation.asset("assets/rive/devices.riv",alignment: Alignment.center,),
+              //RiveAnimation.asset("assets/rive/devices.riv"),
                Icon(
                 icon,
                 size: 50,

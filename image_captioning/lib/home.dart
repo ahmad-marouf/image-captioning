@@ -3,14 +3,16 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:image_captioning/shared_coponents.dart';
+import 'package:image_captioning/side_bar_screen.dart';
 import 'package:image_captioning/slideAnimation.dart';
 import 'package:rive/rive.dart';
 import 'firstScene.dart';
 import 'camera_page.dart';
 import 'package:camera/camera.dart';
-
 import 'package:image_captioning/model/decoder.dart';
 import 'package:image_captioning/model/encoder.dart';
+
+import 'gallery_screen.dart';
 
 class homeState extends StatefulWidget {
   const homeState({Key? key}) : super(key: key);
@@ -49,6 +51,9 @@ class homeScene extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        resizeToAvoidBottomInset: false,
+      drawer: Container(color: Colors.black,
+          child: SideBar()),
       extendBodyBehindAppBar: true,
       appBar: AppBar(
         title: const Text(
@@ -60,7 +65,7 @@ class homeScene extends StatelessWidget {
         ),
         centerTitle: true,
         automaticallyImplyLeading: false,
-        elevation: 10,
+        elevation: 0,
         shadowColor: Colors.transparent,
         backgroundColor: Colors.transparent,
         actions: [
@@ -84,14 +89,7 @@ class homeScene extends StatelessWidget {
           )
         ],
       ),
-      body: /*Container(
-        decoration: const BoxDecoration(
-            image: DecorationImage(
-                image: AssetImage('assets/image/Waves Alt.png'),
-                fit: BoxFit.cover),
-        ),*/
-          //alignment: Alignment.center,
-          /*child:*/ Stack(
+      body: Stack(
           fit: StackFit.expand,
           children: [
         const RiveAnimation.asset(
@@ -125,20 +123,21 @@ class homeScene extends StatelessWidget {
                 navigator: () async {
                   await availableCameras().then(
                     (value) => Navigator.of(context).push(SlideAnimation(
-                        beginX: 1, page: CameraPage(cameras: value))),
+                        beginX: 1, page: CameraPage(cameras: value)
+                    )),
                   );
                 }),
             const SizedBox(height: 15),
             card(
                 text: 'Gallery',
                 icon: Icons.image,
-                navigator: () async {
+                navigator:() {Navigator.of(context).push(SlideAnimation(beginX: 1,page: GalleryScreen())); }/*() async {
                   Encoder encoder = await Encoder.instance;
                   Decoder decoder = await Decoder.instance;
                   var result = await encoder.predict('image/test_model_1.jpg');
                   var caption = await decoder.predict(result!);
                   print(caption);
-                }),
+                }*/),
           ],
         ),
       ]),

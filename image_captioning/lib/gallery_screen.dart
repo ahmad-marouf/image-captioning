@@ -32,11 +32,16 @@ class GalleryScreenState extends State<GalleryScreen>{
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: defaultButton(
-            text: 'pick image',
-            function: () {
-              pickImage();
-            },
+        child: Center(
+          child: defaultButton(
+            width: 200,
+              height: 200,
+              text: 'pick image',
+              function: () {
+                pickImage();
+
+              },
+          ),
         ),
       ),
     );

@@ -14,6 +14,9 @@ void main(){
       systemNavigationBarColor: Colors.transparent,
     ),
   );
+  WidgetsFlutterBinding.ensureInitialized();
+  SystemChrome.setPreferredOrientations(
+      [DeviceOrientation.portraitUp, DeviceOrientation.portraitDown]);
   runApp(const ConstructionApp());
 }
 

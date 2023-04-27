@@ -10,13 +10,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c0cf96fa-60fe-4e56-b251-04010795af08" name="Changes" comment="background animation and modified card buttons">
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/image_captioning/assets/RiveAssets/devices.riv" beforeDir="false" afterPath="$PROJECT_DIR$/image_captioning/assets/rive/devices.riv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/image_captioning/assets/RiveAssets/shapes.riv" beforeDir="false" afterPath="$PROJECT_DIR$/image_captioning/assets/rive/shapes.riv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/image_captioning/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/image_captioning/pubspec.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/image_captioning/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/image_captioning/pubspec.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_captioning/assets/rive/devices.riv" beforeDir="false" afterPath="$PROJECT_DIR$/image_captioning/assets/rive/devices.riv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_captioning/assets/rive/shapes.riv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_captioning/lib/camera_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/image_captioning/lib/camera_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_captioning/lib/firstScene.dart" beforeDir="false" afterPath="$PROJECT_DIR$/image_captioning/lib/firstScene.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_captioning/lib/gallery_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/image_captioning/lib/gallery_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_captioning/lib/home.dart" beforeDir="false" afterPath="$PROJECT_DIR$/image_captioning/lib/home.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_captioning/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/image_captioning/lib/main.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_captioning/lib/preview_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/image_captioning/lib/preview_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_captioning/lib/shared_coponents.dart" beforeDir="false" afterPath="$PROJECT_DIR$/image_captioning/lib/shared_coponents.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_captioning/lib/side_bar_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/image_captioning/lib/side_bar_screen.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -171,7 +175,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682608900311</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="background animation and modified card buttons">
+      <created>1682608980010</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1682608980010</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

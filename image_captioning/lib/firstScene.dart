@@ -8,6 +8,11 @@ class firstScene extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        iconTheme: IconThemeData(color: Colors.black),
+        backgroundColor: Colors.transparent,
+        shadowColor: Colors.transparent,
+      ),
       body: Container(
         alignment: Alignment.center,
         child: Stack(
