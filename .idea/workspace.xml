@@ -9,19 +9,12 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c0cf96fa-60fe-4e56-b251-04010795af08" name="Changes" comment="update">
-      <change afterPath="$PROJECT_DIR$/.idea/jsonSchemas.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/image_captioning/assets/RiveAssets/devices.riv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/image_captioning/assets/RiveAssets/shapes.riv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/image_captioning/assets/image/Waves Alt.png" afterDir="false" />
+    <list default="true" id="c0cf96fa-60fe-4e56-b251-04010795af08" name="Changes" comment="background animation and modified card buttons">
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/image_captioning/lib/IntroScreen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/image_captioning/lib/IntroScreen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/image_captioning/lib/firstScene.dart" beforeDir="false" afterPath="$PROJECT_DIR$/image_captioning/lib/firstScene.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/image_captioning/lib/home.dart" beforeDir="false" afterPath="$PROJECT_DIR$/image_captioning/lib/home.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/image_captioning/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/image_captioning/lib/main.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/image_captioning/lib/shared_coponents.dart" beforeDir="false" afterPath="$PROJECT_DIR$/image_captioning/lib/shared_coponents.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_captioning/assets/RiveAssets/devices.riv" beforeDir="false" afterPath="$PROJECT_DIR$/image_captioning/assets/rive/devices.riv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_captioning/assets/RiveAssets/shapes.riv" beforeDir="false" afterPath="$PROJECT_DIR$/image_captioning/assets/rive/shapes.riv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/image_captioning/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/image_captioning/pubspec.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/image_captioning/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/image_captioning/pubspec.yaml" afterDir="false" />
     </list>
@@ -59,7 +52,7 @@
     "com.google.services.firebase.aqiPopupShown": "true",
     "dart.analysis.tool.window.visible": "false",
     "io.flutter.reload.alreadyRun": "true",
-    "last_opened_file_path": "C:/Users/karim/StudioProjects/image_captioning",
+    "last_opened_file_path": "C:/Users/karim/StudioProjects/image_captioning/image_captioning/assets/rive",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
@@ -68,7 +61,11 @@
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\karim\StudioProjects\image_captioning\image_captioning\assets\rive" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\karim\StudioProjects\image_captioning\image_captioning\assets\rive" />
       <recent name="C:\Users\karim\StudioProjects\image_captioning\image_captioning\assets\image" />
       <recent name="C:\Users\karim\StudioProjects\image_captioning\image_captioning\assets\RiveAssets" />
       <recent name="C:\Users\karim\StudioProjects\image_captioning\image_captioning\assets\RiveAssests" />
@@ -153,7 +150,28 @@
       <option name="project" value="LOCAL" />
       <updated>1679534128904</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="modified the design of app">
+      <created>1682555786763</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1682555786763</updated>
+    </task>
+    <task id="LOCAL-00011" summary="modified the design of app">
+      <created>1682555878850</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1682555878850</updated>
+    </task>
+    <task id="LOCAL-00012" summary="background animation and modified card buttons">
+      <created>1682608900311</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1682608900311</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -177,6 +195,8 @@
     <MESSAGE value="change the slideAnimation parameter" />
     <MESSAGE value="hide the status bar in the camera_page.dart" />
     <MESSAGE value="update" />
-    <option name="LAST_COMMIT_MESSAGE" value="update" />
+    <MESSAGE value="modified the design of app" />
+    <MESSAGE value="background animation and modified card buttons" />
+    <option name="LAST_COMMIT_MESSAGE" value="background animation and modified card buttons" />
   </component>
 </project>
