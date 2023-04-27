@@ -61,8 +61,8 @@ class SplashState extends State<Splash> with AfterLayoutMixin<Splash> {
 
   @override
   Widget build(BuildContext context) {
-    return new Scaffold(
-      body: new Center(
+    return new MaterialApp(
+      home: new Center(
         child: CircularProgressIndicator(),
       ),
     );
