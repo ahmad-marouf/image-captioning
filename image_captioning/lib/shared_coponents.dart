@@ -2,6 +2,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:image_captioning/slideAnimation.dart';
+import 'package:rive/rive.dart';
 
 Widget defaultButton({
   //required Function function,
@@ -52,24 +53,26 @@ Widget defaultButton({
       shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(10)
       ),
-      shadowColor: Colors.teal,
-      elevation: 10,
-      color: Colors.blueAccent,
+      shadowColor: Colors.white,
+      elevation: 30,
+      color: Colors.white,
       child: InkWell(
         onTap: navigator,
         child:  SizedBox(
-          width: 300,
-          height: 120,
+          width: 320,
+          height: 130,
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children:[
+              //RiveAnimation.asset("assets/rive/devices.riv",alignment: Alignment.center,),
                Icon(
                 icon,
                 size: 50,
               ),
               Text(text,
-                  style: const TextStyle(
-                      color: Colors.white
+                  style: const TextStyle(fontFamily: "CarterOne",
+                      fontSize: 30,
+                      color: Colors.black
                   )
               ),
             ],
