@@ -6,9 +6,14 @@ import 'package:image_captioning/slideAnimation.dart';
 import 'home.dart';
 import 'package:introduction_screen/introduction_screen.dart';
 
-class IntroScreen extends StatelessWidget {
+class IntroScreen extends StatefulWidget {
    IntroScreen({Key? key});
 
+  @override
+  State<IntroScreen> createState() => _IntroScreenState();
+}
+
+class _IntroScreenState extends State<IntroScreen> {
   List<PageViewModel> listPagesViewModel = [
     PageViewModel(
       title: "Title of introduction page",
@@ -42,16 +47,9 @@ class IntroScreen extends StatelessWidget {
       body: "This is a description on a page with a custom button below.",
       footer: defaultButton(
           text: 'let\'s go',
-          function: (){
-            Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context)=>Splash()
-                ),
-            );
-          }
+          function: (){}
       ),
     )];
-
 
   @override
   Widget build(BuildContext context) {
@@ -61,7 +59,10 @@ class IntroScreen extends StatelessWidget {
       showNextButton: false,
       skip: const Text("Skip"),
       next: const Text('Next'),
-      done: const Text("Done",style: TextStyle(fontWeight: FontWeight.w700)),
+      done: const Text("Done",
+          style: TextStyle(
+              fontWeight: FontWeight.w700)
+      ),
       onDone: () {
         Navigator.of(context).pushReplacement(SlideAnimation(
           page: homeState(),

@@ -14,8 +14,6 @@ void main(){
       systemNavigationBarColor: Colors.transparent,
     ),
   );
-
-
   runApp(const ConstructionApp());
 }
 

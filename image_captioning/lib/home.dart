@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:image_captioning/shared_coponents.dart';
 import 'package:image_captioning/slideAnimation.dart';
+import 'package:rive/rive.dart';
 import 'firstScene.dart';
 import 'camera_page.dart';
 import 'package:camera/camera.dart';
@@ -29,7 +31,7 @@ class _homeState extends State<homeState> {
           now.difference(_currentBackPressTime!) > Duration(seconds: 2)) {
         _currentBackPressTime = now;
         ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(
+          const SnackBar(
             content: Text('Press back button again to exit'),
           ),
         );
@@ -39,7 +41,9 @@ class _homeState extends State<homeState> {
     },
     child: homeScene(),
   );
+
 }
+
 
 
 class homeScene extends StatelessWidget {
@@ -49,27 +53,30 @@ class homeScene extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Hello',
+        title: const  Text('Hello',
             style: TextStyle(
-                fontFamily: "CarterOne", fontSize: 50, color: Colors.black)),
+                fontFamily: "CarterOne",
+                fontSize: 50,
+                color: Colors.black)
+        ),
         centerTitle: true,
         automaticallyImplyLeading: false,
         elevation: 10,
         shadowColor: Colors.teal,
         backgroundColor: Colors.tealAccent,
-        //shape: StadiumBorder(),
+
         actions: [
           IconButton(
             onPressed: () {
               showDialog(
                   context: context,
                   builder: (context) => AlertDialog(
-                    title: Text('my title'),
-                    content: Text('the body of the help icon'),
+                    title: const Text('my title'),
+                    content: const Text('the body of the help icon'),
                     actions: [
                       TextButton(
                           onPressed: () => Navigator.pop(context),
-                          child: Text('OK'))
+                          child: const Text('OK'))
                     ],
                   ));
             },
@@ -82,51 +89,55 @@ class homeScene extends StatelessWidget {
       body: Container(
         decoration: const BoxDecoration(
             image: DecorationImage(
-                image: AssetImage('assets/image/backgorund_image.jpeg'),
-                fit: BoxFit.cover)),
+                image: AssetImage('assets/image/Waves Alt.png'),
+                fit: BoxFit.cover),
+        ),
         alignment: Alignment.center,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            ElevatedButton(
-              onPressed: () {
-                Navigator.of(context).push(SlideAnimation(
-                    page: firstScene(),
+            card(
+                text: 'External devices',
+                icon:  Icons.devices_other,
+                navigator:() {
+                  Navigator.of(context).push(SlideAnimation(
+                    page: const firstScene(),
                     beginX: 1,
-                    ));
-              },
-              child: Text('Second Screen'),
-              style: ElevatedButton.styleFrom(
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(8))),
+                  )
+                  );
+                }
+                ),
+            const SizedBox(height: 15),
+            card(
+                text: 'Camera',
+                icon: Icons.camera,
+                navigator: () async {
+                  await availableCameras().then((value) =>
+                      Navigator.of(context).push(SlideAnimation(
+                          beginX: 1,
+                          page: CameraPage(cameras: value))
+                      ),
+                  );
+                }
             ),
-            ElevatedButton(
-              onPressed: () async {
-                 await availableCameras().then((value) =>
-                        Navigator.of(context).push(SlideAnimation(
-                            beginX: 1,
-                            page: CameraPage(cameras: value))
-                        ),
-                    );
-              },
-              child: Text('Second Screen'),
-              style: ElevatedButton.styleFrom(),
-            ),
-            ElevatedButton(
-              onPressed: () async {
-                // Navigator.pushNamed(context, 'first');
-                Encoder encoder = await Encoder.instance;
-                Decoder decoder = await Decoder.instance;
-                var result = await encoder.predict('image/test_model_1.jpg');
-                var caption = await decoder.predict(result!);
-                print(caption);
-              },
-              child: Text('Second Screen'),
-              style: ElevatedButton.styleFrom(),
-            )
+            const SizedBox(height: 15),
+            card(
+                text: 'Gallery',
+                icon: Icons.image,
+                navigator: () async{
+              Encoder encoder = await Encoder.instance;
+              Decoder decoder = await Decoder.instance;
+              var result = await encoder.predict('image/test_model_1.jpg');
+              var caption = await decoder.predict(result!);
+              print(caption);
+            }),
           ],
         ),
       ),
     );
   }
+
+
+
+
 }

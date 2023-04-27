@@ -28,7 +28,6 @@ environment:
 # the latest version available on pub.dev. To see which dependencies have newer
 # versions available, run `flutter pub outdated`.
 dependencies:
-  image_picker: ^0.8.7+4
   flutter_tts: ^3.6.3
   flutter:
     sdk: flutter
@@ -36,6 +35,7 @@ dependencies:
   introduction_screen: ^3.1.6
   shared_preferences: ^2.0.18
   camera: ^0.10.3+2
+  rive: ^0.9.1
 
   # packages used for bluetooth
   flutter_bluetooth_serial: ^0.4.0
@@ -43,6 +43,7 @@ dependencies:
   dropdown_formfield: ^0.1.4
   photo_view: ^0.14.0
   flutter_svprogresshud: ^1.0.0
+  image_picker: ^0.8.7+4
 
   # packages used for model
   tflite_flutter:
@@ -68,8 +69,10 @@ dependencies:
 #      path: packages/camera/camera_android
 #      ref: e1a4dba770da9bc3cf9f858bac6837083f8b9059
 
+
+
 dev_dependencies:
-  flutter_launcher_icons: "^0.9.1" # "^0.12.0" # downgraded for compatibility with image: ^3.0.2
+  flutter_launcher_icons: ^0.11.0 # "^0.12.0" # downgraded for compatibility with image: ^3.0.2
   flutter_test:
     sdk: flutter
 

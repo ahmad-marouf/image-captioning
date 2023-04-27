@@ -1,23 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AndroidLayouts">
+    <shared>
+      <config />
+    </shared>
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c0cf96fa-60fe-4e56-b251-04010795af08" name="Changes" comment="hide the status bar in the camera_page.dart">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/image_captioning.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/image_captioning.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" beforeDir="false" />
+    <list default="true" id="c0cf96fa-60fe-4e56-b251-04010795af08" name="Changes" comment="update">
+      <change afterPath="$PROJECT_DIR$/.idea/jsonSchemas.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image_captioning/assets/RiveAssets/devices.riv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image_captioning/assets/RiveAssets/shapes.riv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image_captioning/assets/image/Waves Alt.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/image_captioning/lib/IntroScreen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/image_captioning/lib/IntroScreen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/image_captioning/lib/camera_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/image_captioning/lib/camera_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_captioning/lib/firstScene.dart" beforeDir="false" afterPath="$PROJECT_DIR$/image_captioning/lib/firstScene.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/image_captioning/lib/home.dart" beforeDir="false" afterPath="$PROJECT_DIR$/image_captioning/lib/home.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/image_captioning/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/image_captioning/lib/main.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/image_captioning/lib/preview_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/image_captioning/lib/preview_page.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/image_captioning/lib/slideAnimation.dart" beforeDir="false" afterPath="$PROJECT_DIR$/image_captioning/lib/slideAnimation.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_captioning/lib/shared_coponents.dart" beforeDir="false" afterPath="$PROJECT_DIR$/image_captioning/lib/shared_coponents.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_captioning/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/image_captioning/pubspec.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_captioning/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/image_captioning/pubspec.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,6 +35,9 @@
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="2NLTpSKs4Eg9QLVqtOetg6fEtqa" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -47,16 +56,25 @@
     "RunOnceActivity.cidr.known.project.marker": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "cidr.known.project.marker": "true",
+    "com.google.services.firebase.aqiPopupShown": "true",
     "dart.analysis.tool.window.visible": "false",
     "io.flutter.reload.alreadyRun": "true",
     "last_opened_file_path": "C:/Users/karim/StudioProjects/image_captioning",
-    "project.structure.last.edited": "SDKs",
+    "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "flutter.settings",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
     "show.migrate.to.gradle.popup": "false"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\karim\StudioProjects\image_captioning\image_captioning\assets\image" />
+      <recent name="C:\Users\karim\StudioProjects\image_captioning\image_captioning\assets\RiveAssets" />
+      <recent name="C:\Users\karim\StudioProjects\image_captioning\image_captioning\assets\RiveAssests" />
+      <recent name="C:\Users\karim\StudioProjects\image_captioning\image_captioning\assets\tflite_models" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="main.dart" type="FlutterRunConfigurationType" factoryName="Flutter">
       <option name="filePath" value="$PROJECT_DIR$/image_captioning/lib/main.dart" />
@@ -128,7 +146,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679519232205</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="update">
+      <created>1679534128904</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1679534128904</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -151,6 +176,7 @@
     <MESSAGE value="put animation on the preview page" />
     <MESSAGE value="change the slideAnimation parameter" />
     <MESSAGE value="hide the status bar in the camera_page.dart" />
-    <option name="LAST_COMMIT_MESSAGE" value="hide the status bar in the camera_page.dart" />
+    <MESSAGE value="update" />
+    <option name="LAST_COMMIT_MESSAGE" value="update" />
   </component>
 </project>

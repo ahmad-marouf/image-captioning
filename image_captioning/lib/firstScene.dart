@@ -28,7 +28,12 @@ class firstScene extends StatelessWidget{
     );
   }
 
-  button({context,text,page}){
+  button(
+      {
+        context,
+        text,
+        page}
+      ){
     return ElevatedButton(
       child: Text(text),
       onPressed: (){
@@ -53,8 +58,4 @@ class firstScene extends StatelessWidget{
       shape: StadiumBorder(),
     );  //stylefrom
   }
-
-
-
-
 }
