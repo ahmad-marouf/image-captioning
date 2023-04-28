@@ -21,8 +21,10 @@ class homeState extends StatefulWidget {
   State<homeState> createState() => _homeState();
 }
 
-class _homeState extends State<homeState> {
-  DateTime? _currentBackPressTime;
+class _homeState extends State<homeState> with TickerProviderStateMixin{
+  late final AnimationController _controller;
+  late final Animation<double> _animation;
+   DateTime? _currentBackPressTime;
 
   @override
   Widget build(BuildContext context) => WillPopScope(
