@@ -2,6 +2,8 @@ import 'dart:io';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:image_captioning/IntroScreen.dart';
+import 'package:image_captioning/slideAnimation.dart';
 
 class SideBar extends StatelessWidget{
   @override
@@ -30,7 +32,12 @@ class SideBar extends StatelessWidget{
             title: Text(
               'App guide'
             ),
-            onTap: (){},
+            onTap: (){Navigator.of(context).push(
+                SlideAnimation(
+                    page: IntroScreen(),
+                    beginX: -1)
+            );
+              },
           ),
           ListTile(
             leading: Icon(
