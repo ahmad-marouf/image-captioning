@@ -39,7 +39,7 @@ class SideBar extends StatelessWidget{
             );
               },
           ),
-          ListTile(
+          /*ListTile(
             leading: Icon(
               Icons.settings,
             ),
@@ -47,7 +47,7 @@ class SideBar extends StatelessWidget{
               'Settings',
             ),
             onTap: (){},
-          ),
+          ),*/
           ListTile(
             leading: Icon(
                 Icons.people
@@ -57,7 +57,7 @@ class SideBar extends StatelessWidget{
             ),
             onTap: (){},
           ),
-          ListTile(
+          /*ListTile(
             leading: Icon(
               Icons.exit_to_app,
             ),
@@ -67,7 +67,7 @@ class SideBar extends StatelessWidget{
             onTap: (){
               exit(0);
             },
-          ),
+          ),*/
         ],
       ),
     );
