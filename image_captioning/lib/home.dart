@@ -45,6 +45,30 @@ class _homeState extends State<homeState> with TickerProviderStateMixin{
         },
         child: homeScene(animation: _animation,),
       );
+
+  @override
+  void initState(){
+
+    _controller = AnimationController(
+      duration: const Duration(milliseconds: 500),
+      vsync: this
+    );
+    _animation = CurvedAnimation(
+      parent: _controller,
+      curve: Curves.easeIn,
+    );
+    Timer(
+        Duration(milliseconds: 200),
+            (){_controller.forward();
+        });
+    super.initState();
+  }
+
+  @override
+  void dispose(){
+    _controller.dispose();
+    super.dispose();
+  }
 }
 
 class homeScene extends StatelessWidget {
