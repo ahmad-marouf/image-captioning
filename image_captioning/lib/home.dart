@@ -1,7 +1,6 @@
+import 'dart:async';
 import 'dart:ui';
-
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:image_captioning/shared_coponents.dart';
 import 'package:image_captioning/side_bar_screen.dart';
 import 'package:image_captioning/slideAnimation.dart';
@@ -128,44 +127,52 @@ class homeScene extends StatelessWidget {
           filter: ImageFilter.blur(
               sigmaX: 10,
               sigmaY: 10),
-          child: SizedBox(),
+          child: const SizedBox(),
         )),
-        Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            SizedBox(height: 50),
-            card(
-                text: 'External devices',
-                icon: Icons.devices_other,
-                navigator: () {
-                  Navigator.of(context).push(SlideAnimation(
-                    page: const firstScene(),
-                    beginX: 1,
-                  ));
-                }),
-            const SizedBox(height: 15),
-            card(
-                text: 'Camera',
-                icon: Icons.camera,
-                navigator: () async {
-                  await availableCameras().then(
-                    (value) => Navigator.of(context).push(SlideAnimation(
-                        beginX: 1, page: CameraPage(cameras: value)
-                    )),
-                  );
-                }),
-            const SizedBox(height: 15),
-            card(
-                text: 'Gallery',
-                icon: Icons.image,
-                navigator:() {Navigator.of(context).push(SlideAnimation(beginX: 1,page: GalleryScreen())); }/*() async {
-                  Encoder encoder = await Encoder.instance;
-                  Decoder decoder = await Decoder.instance;
-                  var result = await encoder.predict('image/test_model_1.jpg');
-                  var caption = await decoder.predict(result!);
-                  print(caption);
-                }*/),
-          ],
+        SlideTransition(
+          position: Tween<Offset>(
+            begin: Offset(0,0.025),
+            end: Offset(0,0)
+          ).animate(animation),
+          child: FadeTransition(
+            opacity: animation,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                const SizedBox(height: 50),
+                card(
+                    text: 'External devices',
+                    icon: Icons.devices_other,
+                    navigator: () {
+                      Navigator.of(context).push(SlideAnimation(
+                        page: const firstScene(),
+                        beginX: 1,
+                      ));
+                    }),
+                const SizedBox(height: 15),
+                card(
+                    text: 'Camera',
+                    icon: Icons.camera,
+                    navigator: () async {
+                      await availableCameras().then(
+                        (value) => Navigator.of(context).push(SlideAnimation(
+                            beginX: 1, page: CameraPage(cameras: value)
+                        )),
+                      );
+                    }),
+                const SizedBox(height: 15),
+                card(
+                    text: 'Gallery',
+                    icon: Icons.image,
+                    navigator:() {Navigator.of(context).push(SlideAnimation(beginX: 1,page: GalleryScreen())); }/*() async {
+                      Encoder encoder = await Encoder.instance;
+                      Decoder decoder = await Decoder.instance;
+                      var result = await encoder.predict('image/test_model_1.jpg');
+                      var caption = await decoder.predict(result!);
+                      print(caption);
+                    }*/)
+              ]),
+          ),
         ),
       ]),
     );
