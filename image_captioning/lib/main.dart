@@ -41,9 +41,9 @@ class Splash extends StatefulWidget {
 class SplashState extends State<Splash> with AfterLayoutMixin<Splash> {
   Future checkFirstSeen() async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
-    bool _seen = (prefs.getBool('seen') ?? false);
+    /*bool _seen = (prefs.getBool('seen') ?? false);
 
-    /*if (_seen) {
+    if (_seen) {
       Navigator.of(context).pushReplacement(
           new MaterialPageRoute(builder: (context) => new homeState()));
     } else {
