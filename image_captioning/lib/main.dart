@@ -53,7 +53,7 @@ class SplashState extends State<Splash> with AfterLayoutMixin<Splash> {
     }*/
 
     Navigator.of(context).pushReplacement(
-        new MaterialPageRoute(builder: (context) => new IntroScreen()
+        MaterialPageRoute(builder: (context) => IntroScreen()
         )
     );
 
@@ -64,8 +64,8 @@ class SplashState extends State<Splash> with AfterLayoutMixin<Splash> {
 
   @override
   Widget build(BuildContext context) {
-    return new MaterialApp(
-      home: new Center(
+    return const MaterialApp(
+      home: Center(
         child: CircularProgressIndicator(),
       ),
     );
