@@ -1,7 +1,4 @@
-
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:image_captioning/slideAnimation.dart';
 import 'package:rive/rive.dart';
 
 Widget defaultButton({
@@ -16,6 +13,10 @@ Widget defaultButton({
 
 })=>Container(
   width:width,height: height,
+  decoration: BoxDecoration(
+    borderRadius: BorderRadius.circular(20),
+    color: backGroundColor,
+  ),
   child: MaterialButton(
     shape: RoundedRectangleBorder(
       borderRadius: BorderRadius.circular(10),
@@ -30,7 +31,7 @@ Widget defaultButton({
             alignment: Alignment.center,
             child: Text(
               isUpperCase? text.toUpperCase() : text,
-              style: TextStyle(
+              style: const TextStyle(
                 color: Colors.white,
               ),
             ),
@@ -38,10 +39,6 @@ Widget defaultButton({
         ),
       ],
     ),
-  ),
-  decoration: BoxDecoration(
-    borderRadius: BorderRadius.circular(20),
-    color: backGroundColor,
   ),
 );
 
