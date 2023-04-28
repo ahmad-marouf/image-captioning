@@ -43,12 +43,13 @@ class _homeState extends State<homeState> with TickerProviderStateMixin{
           }
           return true;
         },
-        child: homeScene(),
+        child: homeScene(animation: _animation,),
       );
 }
 
 class homeScene extends StatelessWidget {
-  const homeScene({super.key});
+  final  Animation<double> animation;
+  const homeScene({super.key, required this.animation});
 
   @override
   Widget build(BuildContext context) {
