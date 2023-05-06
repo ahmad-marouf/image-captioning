@@ -20,7 +20,13 @@ class GalleryScreenState extends State<GalleryScreen>{
   Future pickImage()async{
     try {
       final image = await ImagePicker().pickImage(source: ImageSource.gallery);
-      if(image== null) return;
+      if(image== null) {
+        if (mounted) {
+          Navigator.of(context).pop();
+        }
+        return;
+      }
+
 
       Uint8List pngBytes = await image.readAsBytes();
       if (mounted) {
@@ -29,8 +35,8 @@ class GalleryScreenState extends State<GalleryScreen>{
       }
       
       // setState(() {
-      //   final tempImage = File(image.path);
-      //   this.image = tempImage;
+        // final tempImage = File(image.path);
+        // this.image = tempImage;
       // });
     } on PlatformException catch (e) {
       print("Failed to pick an image: $e");

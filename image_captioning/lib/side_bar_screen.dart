@@ -6,6 +6,8 @@ import 'package:image_captioning/IntroScreen.dart';
 import 'package:image_captioning/slideAnimation.dart';
 
 class SideBar extends StatelessWidget{
+  const SideBar({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Drawer(

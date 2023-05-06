@@ -57,6 +57,7 @@ class WifiStreamState extends State<WifiStream> {
               }
               if (!snapshot.hasData) {
                 print("${snapshot.hasError}, ${snapshot.error}");
+                print(snapshot.connectionState);
                 return const Center(
                   child: CircularProgressIndicator(
                     valueColor: AlwaysStoppedAnimation<Color>(Colors.white),

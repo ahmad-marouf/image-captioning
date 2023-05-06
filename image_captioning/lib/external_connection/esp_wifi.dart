@@ -65,8 +65,10 @@ class WifiCheckState extends State<WifiCheck> with WidgetsBindingObserver {
   }
 
   _wifiStateChangeListener() {
-    wifiSubscription = Connectivity().onConnectivityChanged.listen((event) {
-      isWifiEnabled = event == ConnectivityResult.wifi;
+    AndroidFlutterWifi.isWifiEnabled();
+    wifiSubscription = Connectivity().onConnectivityChanged.listen((event) async {
+      isWifiEnabled = await AndroidFlutterWifi.isWifiEnabled();
+      // isWifiEnabled = event == ConnectivityResult.wifi;
       if (isWifiEnabled) {
         EasyLoading.showSuccess('WIFI Enabled');
         EasyLoading.dismiss();
