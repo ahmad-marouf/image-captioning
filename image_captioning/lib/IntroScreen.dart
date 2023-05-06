@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:image_captioning/main.dart';
-import 'package:image_captioning/shared_coponents.dart';
+import 'package:image_captioning/shared_components.dart';
 import 'package:image_captioning/slideAnimation.dart';
 import 'home.dart';
 import 'package:introduction_screen/introduction_screen.dart';
 
 class IntroScreen extends StatefulWidget {
-   IntroScreen({Key? key});
+   const IntroScreen({super.key});
 
   @override
   State<IntroScreen> createState() => _IntroScreenState();
@@ -65,7 +65,7 @@ class _IntroScreenState extends State<IntroScreen> {
       ),
       onDone: () {
         Navigator.of(context).pushReplacement(SlideAnimation(
-          page: homeState(),
+          page: const homeState(),
           beginY: 1,
         ));
       },

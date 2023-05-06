@@ -67,11 +67,9 @@ class Encoder {
   }
 
   /// Pre-process the image
-  Future<TensorBuffer?> _getProcessedImage(String fileName) async {
+  Future<TensorBuffer?> _getProcessedImage(Uint8List imageBytes) async {
 
-    ByteData imageByteData = await rootBundle.load('assets/$fileName');
-    Uint8List values = imageByteData.buffer.asUint8List();
-    imageLib.Image? image = imageLib.decodeImage(values);
+    imageLib.Image? image = imageLib.decodeImage(imageBytes);
 
     if (image == null) {
       print("Could not load image");
@@ -105,7 +103,7 @@ class Encoder {
   }
 
   /// Runs object detection on the input image
-  Future<ByteBuffer?> predict(String fileName) async {
+  Future<ByteBuffer?> predict(Uint8List imageBytes) async {
 
     if (_interpreter == null) {
       print("Interpreter not initialized");
@@ -113,7 +111,7 @@ class Encoder {
     }
 
     // Pre-process input image to get input TensorBuffer
-    TensorBuffer? inputBuffer = await _getProcessedImage(fileName);
+    TensorBuffer? inputBuffer = await _getProcessedImage(imageBytes);
     if (inputBuffer == null) {
       return null;
     }

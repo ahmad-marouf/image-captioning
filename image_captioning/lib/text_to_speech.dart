@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_tts/flutter_tts.dart';
-import 'package:image_captioning/shared_coponents.dart';
+import 'package:image_captioning/shared_components.dart';
 
 class TextTSpeech extends StatelessWidget{
   @override

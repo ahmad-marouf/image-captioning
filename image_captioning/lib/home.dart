@@ -1,10 +1,11 @@
 import 'dart:async';
 import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:image_captioning/shared_coponents.dart';
+import 'package:image_captioning/shared_components.dart';
 import 'package:image_captioning/side_bar_screen.dart';
 import 'package:image_captioning/slideAnimation.dart';
 import 'package:rive/rive.dart';
+import 'external_connection/esp_wifi.dart';
 import 'firstScene.dart';
 import 'camera_page.dart';
 import 'package:camera/camera.dart';
@@ -82,13 +83,6 @@ class homeScene extends StatelessWidget {
           child: SideBar()),
       extendBodyBehindAppBar: true,
       appBar: AppBar(
-        title: const Text(
-            'Hello',
-            style: TextStyle(
-                fontFamily: "CarterOne",
-                fontSize: 50,
-                color: Colors.white)
-        ),
         centerTitle: true,
         automaticallyImplyLeading: false,
         elevation: 0,
@@ -131,21 +125,39 @@ class homeScene extends StatelessWidget {
         )),
         SlideTransition(
           position: Tween<Offset>(
-            begin: Offset(0,0.025),
-            end: Offset(0,0)
+            begin: const Offset(0,0.025),
+            end: const Offset(0,0)
           ).animate(animation),
           child: FadeTransition(
             opacity: animation,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                const SizedBox(height: 50),
+                // const SizedBox(height: 25),
+                const Text(
+                    'Image Caption Generator',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                        fontFamily: "Goldman",
+                        fontSize: 45,
+                        color: Colors.white)
+                ),
+                const SizedBox(height: 15),
+                const Text(
+                    'Select Capture Method',
+                    style: TextStyle(
+                        fontFamily: "Goldman",
+                        fontSize: 25,
+                        color: Colors.white
+                    )
+                ),
+                const SizedBox(height: 10),
                 card(
                     text: 'External devices',
                     icon: Icons.devices_other,
                     navigator: () {
                       Navigator.of(context).push(SlideAnimation(
-                        page: const firstScene(),
+                        page: const WifiCheck(),
                         beginX: 1,
                       ));
                     }),

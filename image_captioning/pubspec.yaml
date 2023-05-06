@@ -45,6 +45,18 @@ dependencies:
   flutter_svprogresshud: ^1.0.0
   image_picker: ^0.8.7+4
 
+  # packages used for wifi
+  web_socket_channel: ^2.4.0
+  network_info_plus: ^3.0.5
+  connectivity_plus: ^3.0.6
+  gesture_zoom_box: ^0.0.4
+  loading_animations: ^2.2.0
+  android_flutter_wifi: ^0.1.0
+  flutter_easyloading: ^3.0.5
+  location: ^4.4.0
+  gps_connectivity: ^0.0.4
+  open_settings: ^2.0.2
+
   # packages used for model
   tflite_flutter:
     git:
@@ -118,6 +130,12 @@ flutter:
     - family: CarterOne
       fonts:
         - asset: assets/fonts/CarterOne-Regular.ttf
+    - family: Nunito
+      fonts:
+        - asset: assets/fonts/Nunito-Regular.ttf
+    - family: Goldman
+      fonts:
+          - asset: assets/fonts/Goldman-Regular.ttf
 
       #   - family: Schyler
       #     fonts:
@@ -136,5 +154,7 @@ flutter:
 flutter_icons:
   android: "launcher_icon"
   image_path: "assets/image/icon_app.png"
+  adaptive_icon_background: "#1A1A1A"
+  adaptive_icon_foreground: "assets/image/icon_app_foreground.png"
 
 

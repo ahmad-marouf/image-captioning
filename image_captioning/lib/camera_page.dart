@@ -50,12 +50,11 @@ class _CameraPageState extends State<CameraPage> {
     try {
       await _cameraController.setFlashMode(FlashMode.off);
       XFile picture = await _cameraController.takePicture();
-      Navigator.of(context).push(SlideAnimation(
-        beginX: 1,
-        page:PreviewPage(
-            picture: picture
-        )
-      ));
+      Uint8List pngBytes = await picture.readAsBytes();
+      if (mounted) {
+        Navigator.of(context).push(SlideAnimation(
+            beginX: 1, page: CaptionGenerator(imageBytes: pngBytes)));
+      }
     } on CameraException catch (e) {
       debugPrint('Error occured while taking picture: $e');
       return null;

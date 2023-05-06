@@ -3,13 +3,14 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:after_layout/after_layout.dart';
+import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import 'IntroScreen.dart';
 
 void main(){
   SystemChrome.setSystemUIOverlayStyle(
-    SystemUiOverlayStyle(
+    const SystemUiOverlayStyle(
       statusBarColor: Colors.transparent,
       systemNavigationBarColor: Colors.transparent,
     ),
@@ -28,14 +29,17 @@ class ConstructionApp extends StatelessWidget{
     return MaterialApp(
       title: 'Capture Image Generator',
       debugShowCheckedModeBanner: false,
-      home: new Splash(),
+      home: const Splash(),
+      builder: EasyLoading.init(),
     );
   }
 }
 
 class Splash extends StatefulWidget {
+  const Splash({super.key});
+
   @override
-  SplashState createState() => new SplashState();
+  SplashState createState() => SplashState();
 }
 
 class SplashState extends State<Splash> with AfterLayoutMixin<Splash> {
