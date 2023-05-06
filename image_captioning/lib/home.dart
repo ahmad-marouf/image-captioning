@@ -14,14 +14,14 @@ import 'package:image_captioning/model/encoder.dart';
 
 import 'gallery_screen.dart';
 
-class homeState extends StatefulWidget {
-  const homeState({Key? key}) : super(key: key);
+class HomeState extends StatefulWidget {
+  const HomeState({Key? key}) : super(key: key);
 
   @override
-  State<homeState> createState() => _homeState();
+  State<HomeState> createState() => _HomeState();
 }
 
-class _homeState extends State<homeState> with TickerProviderStateMixin{
+class _HomeState extends State<HomeState> with TickerProviderStateMixin{
   late final AnimationController _controller;
   late final Animation<double> _animation;
    DateTime? _currentBackPressTime;
@@ -32,7 +32,7 @@ class _homeState extends State<homeState> with TickerProviderStateMixin{
           DateTime now = DateTime.now();
 
           if (_currentBackPressTime == null ||
-              now.difference(_currentBackPressTime!) > Duration(seconds: 2)) {
+              now.difference(_currentBackPressTime!) > const Duration(seconds: 2)) {
             _currentBackPressTime = now;
             ScaffoldMessenger.of(context).showSnackBar(
               const SnackBar(
@@ -43,7 +43,7 @@ class _homeState extends State<homeState> with TickerProviderStateMixin{
           }
           return true;
         },
-        child: homeScene(animation: _animation,),
+        child: HomeScene(animation: _animation,),
       );
 
   @override
@@ -58,7 +58,7 @@ class _homeState extends State<homeState> with TickerProviderStateMixin{
       curve: Curves.easeIn,
     );
     Timer(
-        Duration(milliseconds: 200),
+        const Duration(milliseconds: 200),
             (){_controller.forward();
         });
     super.initState();
@@ -71,9 +71,9 @@ class _homeState extends State<homeState> with TickerProviderStateMixin{
   }
 }
 
-class homeScene extends StatelessWidget {
+class HomeScene extends StatelessWidget {
   final  Animation<double> animation;
-  const homeScene({super.key, required this.animation});
+  const HomeScene({super.key, required this.animation});
 
   @override
   Widget build(BuildContext context) {
@@ -176,13 +176,12 @@ class homeScene extends StatelessWidget {
                 card(
                     text: 'Gallery',
                     icon: Icons.image,
-                    navigator:() {Navigator.of(context).push(SlideAnimation(beginX: 1,page: GalleryScreen())); }/*() async {
-                      Encoder encoder = await Encoder.instance;
-                      Decoder decoder = await Decoder.instance;
-                      var result = await encoder.predict('image/test_model_1.jpg');
-                      var caption = await decoder.predict(result!);
-                      print(caption);
-                    }*/)
+                    navigator:() {Navigator.of(context).push(
+                        SlideAnimation(
+                            beginX: 1,
+                            page: GalleryScreen()
+                        ));
+                    })
               ]),
           ),
         ),

@@ -9,32 +9,32 @@ class SideBar extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return Drawer(
-      backgroundColor: Colors.white,
+      // backgroundColor: Colors.white,
       child: ListView(
         children: [
-          Image(
+          const Image(
               image: NetworkImage('https://imgs.search.brave.com/kAdF216PFQuQqFvPcNzPz-IyjvlNg-H01bwXFNIDoKY/rs:fit:1337:225:1/g:ce/aHR0cHM6Ly90c2Uz/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC5v/aGZwT3JFY2c3SUV6/QkVkcFdPU2ZBSGFD/byZwaWQ9QXBp'),
             fit: BoxFit.cover,
           ),
           ListTile(
-            leading: Icon(
+            leading: const Icon(
                 Icons.home
             ),
-            title: Text(
+            title: const Text(
               'About Us',
             ),
             onTap: (){},
           ),
           ListTile(
-            leading: Icon(
+            leading: const Icon(
               Icons.info,
             ),
-            title: Text(
+            title: const Text(
               'App guide'
             ),
             onTap: (){Navigator.of(context).push(
                 SlideAnimation(
-                    page: IntroScreen(),
+                    page: const IntroScreen(),
                     beginX: -1)
             );
               },
@@ -49,10 +49,10 @@ class SideBar extends StatelessWidget{
             onTap: (){},
           ),*/
           ListTile(
-            leading: Icon(
+            leading: const Icon(
                 Icons.people
             ),
-            title: Text(
+            title: const Text(
               'Contact us',
             ),
             onTap: (){},

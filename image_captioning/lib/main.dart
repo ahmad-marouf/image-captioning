@@ -31,6 +31,10 @@ class ConstructionApp extends StatelessWidget{
       debugShowCheckedModeBanner: false,
       home: const Splash(),
       builder: EasyLoading.init(),
+      theme: ThemeData(
+        brightness: Brightness.dark,
+        primarySwatch: Colors.teal
+      ),
     );
   }
 }

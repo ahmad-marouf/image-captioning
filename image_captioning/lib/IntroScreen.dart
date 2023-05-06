@@ -65,7 +65,7 @@ class _IntroScreenState extends State<IntroScreen> {
       ),
       onDone: () {
         Navigator.of(context).pushReplacement(SlideAnimation(
-          page: const homeState(),
+          page: const HomeState(),
           beginY: 1,
         ));
       },

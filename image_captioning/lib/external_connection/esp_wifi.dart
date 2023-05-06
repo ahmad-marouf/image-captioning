@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:gps_connectivity/gps_connectivity.dart';
+import 'package:image_captioning/shared_components.dart';
 
 import 'package:location/location.dart';
 import 'package:open_settings/open_settings.dart';
@@ -99,6 +100,7 @@ class WifiCheckState extends State<WifiCheck> with WidgetsBindingObserver {
   }
 
   _listScannedDevices() {
+    devices.clear();
     AndroidFlutterWifi.getWifiScanResult().then((List<WifiNetwork> scannedDevices) {
       scannedDevices.sort((a, b) => a.frequency!.compareTo(b.frequency!));
       // for (var element in scannedDevices) {
@@ -138,137 +140,201 @@ class WifiCheckState extends State<WifiCheck> with WidgetsBindingObserver {
   Widget build(BuildContext context) {
 
     return Scaffold(
-      appBar: AppBar(),
-      // backgroundColor: Colors.grey[900],
+      backgroundColor: const Color(0xFF121212),
+      appBar: AppBar(
+        elevation: 0,
+        shadowColor: Colors.transparent,
+        backgroundColor: Colors.transparent,
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back_ios),
+          color: Colors.teal,
+          onPressed: () {
+            Navigator.of(context).pop();
+          },
+        ),
+      ),
       body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          children: <Widget>[
-            SwitchListTile(
-              title: const Text(
-                'Enable WIFI',
-                style: TextStyle(
-                  fontFamily: "Nunito",
-                //   color: Colors.white,
-                  fontWeight: FontWeight.bold
-                ),
-              ),
-              value: isWifiEnabled,
-              onChanged: (bool value) {
-                future() async {
-                  if (value) {
-                    EasyLoading.show(status: 'Turning On WIFI...');
-                    await AndroidFlutterWifi.enableWifi();
-                  } else {
-                    await AndroidFlutterWifi.disableWifi();
-                  }
-                  return await AndroidFlutterWifi.isConnected();
-                }
-                future().then((state) {
-                  setState(() {
-                    isWifiEnabled = state;
-                  });
-                });
-              },
-            ),
-            SwitchListTile(
-              title: const Text(
-                'Enable Location',
-                style: TextStyle(
-                    fontFamily: "Nunito",
-                    fontWeight: FontWeight.bold
-                ),
-              ),
-              value: isLocationEnabled,
-              onChanged: (bool value) {
-                future() async {
-                  if (value) {
-                    await _location.requestService();
-                  } else {
-                    ScaffoldMessenger.of(context).showSnackBar(
-                        const SnackBar(
-                          content: Text('Navigate to phone settings to disable location'),
-                        )
-                    );
+        child: Padding(
+          padding: const EdgeInsets.only(bottom: 10.0),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: <Widget>[
+              Padding(
+                padding: const EdgeInsets.all(10.0),
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(10.0),
+                  child: Container(
+                    // color: Colors.white12,
+                    decoration: const BoxDecoration(
+                      borderRadius: BorderRadius.all(Radius.circular(10.0)),
+                      boxShadow: [
+                        BoxShadow(
+                            color: Colors.white12, //New
+                            blurRadius: 25.0,
+                            offset: Offset(0, 0))
+                      ],
+                    ),
+                    child: Column(
+                      children: [
+                        SwitchListTile(
+                          title: const Text(
+                            'Enable WIFI',
+                            style: TextStyle(
+                              fontFamily: "Nunito",
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold
+                            ),
+                          ),
+                          value: isWifiEnabled,
+                          onChanged: (bool value) {
+                            future() async {
+                              if (value) {
+                                EasyLoading.show(status: 'Turning On WIFI...');
+                                await AndroidFlutterWifi.enableWifi();
+                              } else {
+                                await AndroidFlutterWifi.disableWifi();
+                              }
+                              return await AndroidFlutterWifi.isConnected();
+                            }
+                            future().then((state) {
+                              setState(() {
+                                isWifiEnabled = state;
+                              });
+                            });
+                          },
+                        ),
+                        SwitchListTile(
+                          title: const Text(
+                            'Enable Location',
+                            style: TextStyle(
+                                fontFamily: "Nunito",
+                                fontWeight: FontWeight.bold
+                            ),
+                          ),
+                          value: isLocationEnabled,
+                          onChanged: (bool value) {
+                            future() async {
+                              if (value) {
+                                await _location.requestService();
+                              } else {
+                                ScaffoldMessenger.of(context).showSnackBar(
+                                    const SnackBar(
+                                      content: Text('Navigate to phone settings to disable location'),
+                                    )
+                                );
 
-                  }
-                  return await _location.serviceEnabled();
-                }
-                future().then((state) {
-                  print("Location Enabled: $state");
-                  setState(() {
-                    isLocationEnabled = state;
-                  });
-                });
-              },
-            ),
-            ListTile(
-              title: const Text(
-                "Current Network",
-                style: TextStyle(
-                    fontFamily: "Nunito",
-                    fontWeight: FontWeight.bold
-                ),
-              ),
-              trailing: Text(
-                  isWifiEnabled ? (
-                      isLocationEnabled ? (
-                          _connectionStatus['name'] ?? "Not Connected"
-                      ) : "Please Enable Location"
-                  ) : "Please Enable Wifi",
-                style: const TextStyle(
-                    fontFamily: "Nunito",
-                    fontWeight: FontWeight.bold
-                ),
-              ),
-            ),
-            ListTile(
-              title: const Text(
-                "Select ESP-32 CAM",
-                style: TextStyle(
-                  fontSize: 20.0,
-                  fontFamily: "Nunito",
-                  fontWeight: FontWeight.bold
+                              }
+                              return await _location.serviceEnabled();
+                            }
+                            future().then((state) {
+                              print("Location Enabled: $state");
+                              setState(() {
+                                isLocationEnabled = state;
+                              });
+                            });
+                          },
+                        ),
+                        ListTile(
+                          title: const Text(
+                            "Current Network",
+                            style: TextStyle(
+                                fontFamily: "Nunito",
+                                fontWeight: FontWeight.bold
+                            ),
+                          ),
+                          trailing: Text(
+                              isWifiEnabled ? (
+                                  isLocationEnabled ? (
+                                      _connectionStatus['name'] ?? "Not Connected"
+                                  ) : "Please Enable Location"
+                              ) : "Please Enable Wifi",
+                            style: TextStyle(
+                              fontFamily: "Nunito",
+                              fontWeight: FontWeight.bold,
+                              color:  (isWifiEnabled && isLocationEnabled) ?
+                                  Colors.white :
+                                  Colors.red
+
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
                 ),
-              trailing: IconButton(
-                icon: const Icon(Icons.refresh),
-                onPressed: () {
-                  _listScannedDevices();
-                  setState(() {});
-                },
               ),
-            ),
-            Expanded(
-              child: ListView(
-                  children: devices.map((device) {
-                    return (device.ssid != "")  ?
-                    ListTile(
-                      enabled: true,
-                      leading: const Icon(Icons.wifi_rounded),
-                      title: Text(device.ssid ?? "Unknown"),
-                      onTap: () async {
-                        if (device.ssid == "ESP32-CAM") {
-                          bool result =
-                              await AndroidFlutterWifi.connectToNetworkWithSSID(
-                                  device.ssid!);
-                          if (!result) {
-                            OpenSettings.openWIFISetting();
-                          }
-                          setState(() {});
-                        } else {
-                          ScaffoldMessenger.of(context)
-                              .showSnackBar(const SnackBar(
-                            content: Text('Please Select ESP-32 CAM'),
-                          ));
-                        }
-                      },
-                    ) :
-                      Container();
-              }).toList()
+              Expanded(
+                child: Padding(
+                  padding: const EdgeInsets.all(10.0),
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(10.0),
+                    child: Container(
+                      // height: 450,
+                      decoration: const BoxDecoration(
+                        borderRadius: BorderRadius.all(Radius.circular(10.0)),
+                        boxShadow: [
+                          BoxShadow(
+                              color: Colors.white12, //New
+                              blurRadius: 25.0,
+                              offset: Offset(0, 0))
+                        ],
+                      ),
+                      child: Column(
+                        children: [
+                          ListTile(
+                            title: const Text(
+                              "Select ESP-32 CAM",
+                              style: TextStyle(
+                                fontSize: 20.0,
+                                fontFamily: "Nunito",
+                                fontWeight: FontWeight.bold
+                                ),
+                              ),
+                            trailing: IconButton(
+                              icon: const Icon(Icons.refresh),
+                              onPressed: () {
+                                _listScannedDevices();
+                                setState(() {});
+                              },
+                            ),
+                          ),
+                          Expanded(
+                            child: ListView(
+                                children: devices.map((device) {
+                                  return (device.ssid != "")  ?
+                                  ListTile(
+                                    enabled: true,
+                                    leading: const Icon(Icons.wifi_rounded),
+                                    title: Text(device.ssid ?? "Unknown"),
+                                    onTap: () async {
+                                      if (device.ssid == "ESP32-CAM") {
+                                        bool result =
+                                            await AndroidFlutterWifi.connectToNetworkWithSSID(
+                                                device.ssid!);
+                                        if (!result) {
+                                          OpenSettings.openWIFISetting();
+                                        }
+                                        setState(() {});
+                                      } else {
+                                        ScaffoldMessenger.of(context)
+                                            .showSnackBar(const SnackBar(
+                                          content: Text('Please Select ESP-32 CAM'),
+                                        ));
+                                      }
+                                    },
+                                  ) :
+                                    Container();
+                            }).toList()
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );
@@ -281,7 +347,7 @@ class WifiCheckState extends State<WifiCheck> with WidgetsBindingObserver {
           context,
           MaterialPageRoute(
               builder: (BuildContext context) => WifiStream(
-                channel: IOWebSocketChannel.connect('ws://192.168.4.1:8888'),
+                channel: IOWebSocketChannel.connect('ws://192.168.4.1:8888', connectTimeout: null),
               )));
     });
   }

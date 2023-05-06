@@ -24,7 +24,7 @@ class firstScene extends StatelessWidget{
               child:button(
                   context: context,
                   text: 'Main Menu',
-                  page:homeState()
+                  page:HomeState()
               ),
             ),
           ],

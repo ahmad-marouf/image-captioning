@@ -5,6 +5,7 @@ import 'dart:ui' as ui;
 import 'dart:async';
 
 import 'package:gesture_zoom_box/gesture_zoom_box.dart';
+import 'package:image_captioning/shared_components.dart';
 import 'package:web_socket_channel/web_socket_channel.dart';
 
 import 'package:image_captioning/slideAnimation.dart';
@@ -42,7 +43,7 @@ class WifiStreamState extends State<WifiStream> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-          color: Colors.grey[900],
+          color: const Color(0xFF121212),
           child: StreamBuilder(
             stream: widget.channel.stream,
             builder: (context, snapshot) {
@@ -55,6 +56,7 @@ class WifiStreamState extends State<WifiStream> {
                 });
               }
               if (!snapshot.hasData) {
+                print("${snapshot.hasError}, ${snapshot.error}");
                 return const Center(
                   child: CircularProgressIndicator(
                     valueColor: AlwaysStoppedAnimation<Color>(Colors.white),
@@ -66,14 +68,31 @@ class WifiStreamState extends State<WifiStream> {
                   // mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: <Widget>[
-                    const Center(
-                      child: Text(
-                        "ESP-32 CAM \nLive Feed",
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 40.0,
-                          fontFamily: "Goldman"
+                    const SizedBox(
+                      height: 50,
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(vertical: 20.0),
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.circular(20.0),
+                        child: Card(
+                          elevation: 10,
+                          shape: RoundedRectangleBorder(
+                            side: const BorderSide(width: 2, color: Colors.transparent),
+                            borderRadius: BorderRadius.circular(20),
+                          ),
+                          child: const SizedBox(
+                          width: double.infinity,
+                            child: Text(
+                              "ESP-32 CAM \nLive Feed",
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 40.0,
+                                fontFamily: "Goldman"
+                              ),
+                            ),
+                          ),
                         ),
                       ),
                     ),
@@ -82,46 +101,44 @@ class WifiStreamState extends State<WifiStream> {
                     ),
                     SizedBox(
                       height: 270,
-                      child: RepaintBoundary(
-                        key: _globalKey,
-                        child: GestureZoomBox(
-                          maxScale: 5.0,
-                          doubleTapScale: 2.0,
-                          duration: const Duration(milliseconds: 200),
-                          child: ClipRRect(
-                            borderRadius: BorderRadius.circular(50),
-                            child: Image.memory(
-                              snapshot.data,
-                              gaplessPlayback: true,
-                              width: newVideoSizeWidth,
-                              height: newVideoSizeHeight,
+                      child: Padding(
+                        padding: const EdgeInsets.all(5.0),
+                        child: CustomPaint(
+                          foregroundPainter: BorderPainter(
+                            Colors.white,
+                            30
+                          ),
+                          child: RepaintBoundary(
+                            key: _globalKey,
+                            child: ClipRRect(
+                              borderRadius: BorderRadius.circular(30),
+                              child: Image.memory(
+                                snapshot.data,
+                                gaplessPlayback: true,
+                                width: newVideoSizeWidth,
+                                height: newVideoSizeHeight,
+                              ),
                             ),
                           ),
                         ),
                       ),
                     ),
                     const SizedBox(
-                      height: 150,
+                      height: 100,
                     ),
                     Container(
                       height: MediaQuery.of(context).size.height * 0.20,
+                      width: double.infinity,
                       decoration: const BoxDecoration(
-                          borderRadius:
-                          BorderRadius.vertical(top: Radius.circular(24)),
+                          borderRadius: BorderRadius.vertical(top: Radius.circular(24)),
                           color: Colors.black),
-                      child: Row(
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: [
-                            Expanded(
-                                child: IconButton(
-                                  onPressed: takeScreenShot,
-                                  iconSize: 50,
-                                  padding: EdgeInsets.zero,
-                                  constraints: const BoxConstraints(),
-                                  icon: const Icon(Icons.circle, color: Colors.white),
-                                )
-                            ),
-                          ]
+                      child:
+                      IconButton(
+                        onPressed: takeScreenShot,
+                        iconSize: 50,
+                        padding: EdgeInsets.zero,
+                        constraints: const BoxConstraints(),
+                        icon: const Icon(Icons.circle, color: Colors.white),
                       ),
                     ),
                   ],
