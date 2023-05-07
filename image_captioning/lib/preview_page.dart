@@ -10,6 +10,7 @@ import 'package:image_captioning/shared_components.dart';
 import 'package:image_captioning/model/encoder.dart';
 import 'package:image_captioning/model/decoder.dart';
 import 'package:flutter_tts/flutter_tts.dart';
+import 'package:rive/rive.dart';
 
 class CaptionGenerator extends StatefulWidget {
   const CaptionGenerator({Key? key, required this.imageBytes}) : super(key: key);
@@ -66,11 +67,13 @@ class _CaptionGeneratorState extends State<CaptionGenerator> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.grey[900],
-      body: Center(
-          child: LoadingFilling.square(
+      body: const Center(
+          child: RiveAnimation.asset('assets/rive/loader.riv',
+          fit: BoxFit.contain)
+        /*LoadingFilling.square(
             borderColor: Colors.teal,
             size: 100,
-          )
+          )*/
       ),
     );
   }

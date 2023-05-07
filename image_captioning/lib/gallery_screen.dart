@@ -8,6 +8,7 @@ import 'package:image_captioning/shared_components.dart';
 import 'package:image_captioning/slideAnimation.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:loading_animations/loading_animations.dart';
+import 'package:rive/rive.dart';
 
 class GalleryScreen extends StatefulWidget{
   @override
@@ -31,7 +32,8 @@ class GalleryScreenState extends State<GalleryScreen>{
       Uint8List pngBytes = await image.readAsBytes();
       if (mounted) {
         Navigator.of(context).pushReplacement(SlideAnimation(
-            beginX: 1, page: CaptionGenerator(imageBytes: pngBytes)));
+            beginX: 1, page: CaptionGenerator(imageBytes: pngBytes)
+        ));
       }
       
       // setState(() {
@@ -49,11 +51,14 @@ class GalleryScreenState extends State<GalleryScreen>{
 
     return Scaffold(
       backgroundColor: Colors.grey[900],
-      body: Center(
-          child: LoadingFilling.square(
+      body: const Center(
+          child: RiveAnimation.asset('assets/rive/loader.riv',
+              fit: BoxFit.contain)
+        /*LoadingFilling.square(
             borderColor: Colors.teal,
             size: 100,
-          )
+          )*/
+
       ),
     );
   }
