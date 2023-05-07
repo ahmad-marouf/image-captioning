@@ -15,7 +15,8 @@ Widget defaultButton({
   required VoidCallback function,
 
 })=>Container(
-  width:width,height: height,
+  width:width,
+  height: height,
   decoration: BoxDecoration(
     borderRadius: BorderRadius.circular(20),
     color: backGroundColor,

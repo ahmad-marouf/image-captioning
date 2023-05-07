@@ -45,9 +45,13 @@ class _IntroScreenState extends State<IntroScreen> {
     PageViewModel(
       title: "Title of custom button page",
       body: "This is a description on a page with a custom button below.",
-      footer: defaultButton(
-          text: 'let\'s go',
-          function: (){}
+      footer: Padding(
+        padding: EdgeInsets.all(20),
+        child: defaultButton(
+          height: 100,
+            text: 'let\'s go',
+            function: (){}
+        ),
       ),
     )];
 
