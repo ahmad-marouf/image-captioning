@@ -100,96 +100,133 @@ class PreviewPage extends StatelessWidget {
     _playSound();
 
     return Scaffold(
-      backgroundColor: Colors.grey.shade900,
+      extendBodyBehindAppBar: true,
+      backgroundColor: const Color(0xFF121212),
       body: Column(
-          children: [
-            SizedBox(
-              height: (image.height! > 500) ? 0 : 200,
-            ),
-            // FractionallySizedBox(
-            //   heightFactor: (image.height! > image.width!) ? 0 : 0.1,
-            // ),
-            Expanded(
-              flex: 4,
-              child: Stack(
-                  children: [
-                    SizedBox(
-                      width: double.infinity,
-                      // height: 200,
-                      child: InnerShadow(
-                        shadows: const [
-                          Shadow(
-                            color: Colors.white,
-                            offset: Offset(0, 0),
-                            blurRadius: 10,
-                          )
-                        ],
-                        child: ClipRRect(
-                          borderRadius: BorderRadius.circular(20),
-                          child: image,
-                        ),
-                      ),
-                    ),
-                    Positioned(
-                      left: 20.0,
-                      top: (image.height! > 500) ? 550 : 200,
-                      width: 45.0,
-                      child: ElevatedButton(
-                        style: ElevatedButton.styleFrom(
-                            backgroundColor: Colors.grey.shade900,
-                            foregroundColor: Colors.teal,
-                            padding: EdgeInsets.zero,
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(20),
-                            )
-                        ),
-                        child: const Icon(Icons.arrow_back_ios_new),
-                        onPressed: () {
-                          Navigator.pop(context);
-                        },
-                      ),
-                    ),
-                    Positioned(
-                      right: 20.0,
-                      top:  (image.height! > 500) ? 550 : 200,
-                      width: 45.0,
-                      child: ElevatedButton(
-                        style: ElevatedButton.styleFrom(
-                            backgroundColor: Colors.grey.shade900,
-                            foregroundColor: Colors.teal,
-                            padding: EdgeInsets.zero,
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(20),
-                            )
-                        ),
-                        child: const Icon(Icons.home_rounded),
-                        onPressed: () {
-                          Navigator.of(context).popUntil((route) => route.isFirst);
-                        },
-                      ),
-                    ),
-                  ]
-              ),
-            ),
-            SizedBox(
-              height: (image.height! > 500) ? 24 : 0,
-            ),
-            Expanded(
-              flex: 1,
-              child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 10),
-                child: Text(
-                  caption,
-                  textAlign: TextAlign.center,
-                  style: const TextStyle(
-                    fontFamily: "Goldman",
+        mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Expanded(
+            flex: 4,
+            child: SizedBox(
+              width: double.infinity,
+              child: InnerShadow(
+                shadows: const [
+                  Shadow(
                     color: Colors.white,
-                    fontSize: 20.0
+                    offset: Offset(0, 0),
+                    blurRadius: 10,
+                  )
+                ],
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(20),
+                  child: FittedBox(
+                    fit: (image.height! > image.width!)? BoxFit.fitWidth : BoxFit.contain,
+                    child: image
                   ),
                 ),
               ),
             ),
-          ]),
+          ),
+          // const Spacer(),
+          Row(
+            children: [
+              Padding(
+                padding: const EdgeInsets.symmetric(vertical: 7, horizontal: 10),
+                child: Container(
+                  decoration: const BoxDecoration(
+                    borderRadius: BorderRadius.all(Radius.circular(20)),
+                    boxShadow: [
+                      BoxShadow(
+                          color: Colors.teal, //New
+                          blurRadius: 20.0,
+                          offset: Offset(0, 0))
+                    ],
+                  ),
+                  child: ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.grey.shade900,
+                        foregroundColor: Colors.teal,
+                        padding: EdgeInsets.zero,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(20),
+                        )
+                    ),
+                    child: const Icon(Icons.arrow_back_ios_new),
+                    onPressed: () {
+                      Navigator.pop(context);
+                    },
+                  ),
+                ),
+              ),
+              const Spacer(),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 10),
+                child: Container(
+                  decoration: const BoxDecoration(
+                    borderRadius: BorderRadius.all(Radius.circular(20)),
+                    boxShadow: [
+                      BoxShadow(
+                          color: Colors.teal, //New
+                          blurRadius: 20.0,
+                          offset: Offset(0, 0))
+                    ],
+                  ),
+                  child: ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.grey.shade900,
+                        foregroundColor: Colors.teal,
+                        padding: EdgeInsets.zero,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(20),
+                        )
+                    ),
+                    child: const Icon(Icons.home_rounded),
+                    onPressed: () {
+                      Navigator.of(context).popUntil((route) => route.isFirst);
+                    },
+                  ),
+                ),
+              ),
+            ],
+          ),
+          // const Spacer(),
+          Expanded(
+            flex: 1,
+            child: Padding(
+              padding: const EdgeInsets.all(10.0),
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(10.0),
+                child: Container(
+                  decoration: const BoxDecoration(
+                    borderRadius: BorderRadius.all(Radius.circular(10.0)),
+                    boxShadow: [
+                      BoxShadow(
+                          color: Colors.white12, //New
+                          blurRadius: 25.0,
+                          offset: Offset(0, 0))
+                    ],
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 10),
+                    child: Center(
+                      child: Text(
+                        caption,
+                        textAlign: TextAlign.center,
+                        style: const TextStyle(
+                          fontFamily: "Goldman",
+                          color: Colors.white,
+                          fontSize: 20.0
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+            ),
+          ),
+          // const Spacer(),
+        ]),
     );
   }
 }
