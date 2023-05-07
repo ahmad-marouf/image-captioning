@@ -1,0 +1,65 @@
+Index: image_captioning/lib/shared_coponents.dart
+===================================================================
+diff --git a/image_captioning/lib/shared_coponents.dart b/image_captioning/lib/shared_coponents.dart
+--- a/image_captioning/lib/shared_coponents.dart	
++++ b/image_captioning/lib/shared_coponents.dart	
+@@ -51,29 +51,38 @@
+       shape: RoundedRectangleBorder(
+           borderRadius: BorderRadius.circular(10)
+       ),
+-      shadowColor: Colors.white,
++      shadowColor: Colors.blueAccent,
+       elevation: 30,
+       color: Colors.white,
+-      child: InkWell(
+-        onTap: navigator,
+-        child:  SizedBox(
+-          width: 320,
+-          height: 130,
+-          child: Column(
+-            mainAxisAlignment: MainAxisAlignment.center,
+-            children:[
+-              //RiveAnimation.asset("assets/rive/devices.riv"),
+-               Icon(
+-                icon,
+-                size: 50,
+-              ),
+-              Text(text,
+-                  style: const TextStyle(fontFamily: "CarterOne",
+-                      fontSize: 30,
+-                      color: Colors.black
+-                  )
+-              ),
+-            ],
++      child: Container(
++        decoration:  BoxDecoration(borderRadius: BorderRadius.circular(10),
++          image: const DecorationImage(opacity: 0.9,
++              image: AssetImage("assets/image/Waves Alt.png"),
++              fit: BoxFit.fill
++
++          )
++        ),
++        child: InkWell(
++          onTap: navigator,
++          child:  SizedBox(
++            width: 320,
++            height: 130,
++            child: Column(
++              mainAxisAlignment: MainAxisAlignment.center,
++              children:[
++                //RiveAnimation.asset("assets/rive/devices.riv"),
++                 Icon(
++                  icon,
++                  size: 50,
++                ),
++                Text(text,
++                    style: const TextStyle(fontFamily: "CarterOne",
++                        fontSize: 30,
++                        color: Colors.black
++                    )
++                ),
++              ],
++            ),
+           ),
+         ),
+       ),

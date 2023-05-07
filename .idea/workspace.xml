@@ -9,16 +9,11 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c0cf96fa-60fe-4e56-b251-04010795af08" name="Changes" comment="working on the side bar and fixes some issues">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_4_21_2023_4_31_PM_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_4_21_2023_4_31_PM__Changes_.xml" beforeDir="false" />
+    <list default="true" id="c0cf96fa-60fe-4e56-b251-04010795af08" name="Changes" comment="add new loader to the app with Rive module">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/image_captioning/assets/image/backgorund_image.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image_captioning/lib/IntroScreen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/image_captioning/lib/IntroScreen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/image_captioning/lib/home.dart" beforeDir="false" afterPath="$PROJECT_DIR$/image_captioning/lib/home.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/image_captioning/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/image_captioning/lib/main.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/image_captioning/lib/shared_coponents.dart" beforeDir="false" afterPath="$PROJECT_DIR$/image_captioning/lib/shared_coponents.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/image_captioning/lib/side_bar_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/image_captioning/lib/side_bar_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_captioning/lib/gallery_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/image_captioning/lib/gallery_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_captioning/lib/preview_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/image_captioning/lib/preview_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_captioning/lib/shared_components.dart" beforeDir="false" afterPath="$PROJECT_DIR$/image_captioning/lib/shared_components.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -188,7 +183,28 @@
       <option name="project" value="LOCAL" />
       <updated>1682629883719</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="menak lelah ya kiro">
+      <created>1683483068113</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1683483068113</updated>
+    </task>
+    <task id="LOCAL-00016" summary="menak lelah ya kiro">
+      <created>1683483289655</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1683483289655</updated>
+    </task>
+    <task id="LOCAL-00017" summary="add new loader to the app with Rive module">
+      <created>1683485981778</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1683485981778</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -215,6 +231,8 @@
     <MESSAGE value="modified the design of app" />
     <MESSAGE value="background animation and modified card buttons" />
     <MESSAGE value="working on the side bar and fixes some issues" />
-    <option name="LAST_COMMIT_MESSAGE" value="working on the side bar and fixes some issues" />
+    <MESSAGE value="menak lelah ya kiro" />
+    <MESSAGE value="add new loader to the app with Rive module" />
+    <option name="LAST_COMMIT_MESSAGE" value="add new loader to the app with Rive module" />
   </component>
 </project>
