@@ -86,6 +86,12 @@ Widget defaultButton({
     );
   }
 
+  loader(){
+    return const RiveAnimation.asset('assets/rive/loader.riv',
+        fit: BoxFit.contain);
+  }
+
+
 
 class InnerShadow extends SingleChildRenderObjectWidget {
   const InnerShadow({
