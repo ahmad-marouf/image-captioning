@@ -57,30 +57,32 @@ class _IntroScreenState extends State<IntroScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return IntroductionScreen(
-      pages: listPagesViewModel,
-      showSkipButton: true,
-      showNextButton: false,
-      skip: const Text("Skip"),
-      next: const Text('Next'),
-      done: const Text("Done",
-          style: TextStyle(
-              fontWeight: FontWeight.w700)
-      ),
-      onDone: () {
-        Navigator.of(context).pushReplacement(SlideAnimation(
-          page: const HomeState(),
-          beginY: 1,
-        ));
-      },
-      dotsDecorator: DotsDecorator(
-        size: const Size.square(10.0),
-        activeSize: const Size(20.0, 10.0),
-        activeColor: Theme.of(context).colorScheme.secondary,
-        color: Colors.black26,
-        spacing: const EdgeInsets.symmetric(horizontal: 3.0),
-        activeShape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(25.0)
+    return SafeArea(
+      child: IntroductionScreen(
+        pages: listPagesViewModel,
+        showSkipButton: true,
+        showNextButton: false,
+        skip: const Text("Skip"),
+        next: const Text('Next'),
+        done: const Text("Done",
+            style: TextStyle(
+                fontWeight: FontWeight.w700)
+        ),
+        onDone: () {
+          Navigator.of(context).pushReplacement(SlideAnimation(
+            page: const HomeState(),
+            beginY: 1,
+          ));
+        },
+        dotsDecorator: DotsDecorator(
+          size: const Size.square(10.0),
+          activeSize: const Size(20.0, 10.0),
+          activeColor: Theme.of(context).colorScheme.secondary,
+          color: Colors.black26,
+          spacing: const EdgeInsets.symmetric(horizontal: 3.0),
+          activeShape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(25.0)
+          ),
         ),
       ),
     );

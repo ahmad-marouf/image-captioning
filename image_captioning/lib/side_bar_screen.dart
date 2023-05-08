@@ -59,7 +59,7 @@ class SideBar extends StatelessWidget{
             ),
             onTap: (){},
           ),
-          /*ListTile(
+          ListTile(
             leading: Icon(
               Icons.exit_to_app,
             ),
@@ -69,7 +69,7 @@ class SideBar extends StatelessWidget{
             onTap: (){
               exit(0);
             },
-          ),*/
+          ),
         ],
       ),
     );

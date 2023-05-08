@@ -83,6 +83,13 @@ class HomeScene extends StatelessWidget {
           child: const SideBar()),
       extendBodyBehindAppBar: true,
       appBar: AppBar(
+        leading: Builder(
+            builder: (context){
+              return IconButton(
+                  onPressed: ()=>Scaffold.of(context).openDrawer(),
+                  icon: Icon(Icons.menu));
+            },
+        ),
         centerTitle: true,
         automaticallyImplyLeading: false,
         elevation: 0,
