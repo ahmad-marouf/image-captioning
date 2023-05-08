@@ -47,11 +47,7 @@ class _IntroScreenState extends State<IntroScreen> {
       body: "This is a description on a page with a custom button below.",
       footer: Padding(
         padding: EdgeInsets.all(20),
-        child: defaultButton(
-          height: 100,
-            text: 'let\'s go',
-            function: (){}
-        ),
+        child: SizedBox(),
       ),
     )];
 
