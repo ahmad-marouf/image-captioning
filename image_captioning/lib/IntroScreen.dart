@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_glow/flutter_glow.dart';
 import 'package:image_captioning/main.dart';
 import 'package:image_captioning/shared_components.dart';
 import 'package:image_captioning/slideAnimation.dart';
@@ -58,7 +59,12 @@ class _IntroScreenState extends State<IntroScreen> {
         pages: listPagesViewModel,
         showSkipButton: true,
         showNextButton: false,
-        skip: const Text("Skip"),
+        skip: const GlowText(
+            "Skip",
+          glowColor: Colors.blue,
+          blurRadius: 15,
+
+        ),
         next: const Text('Next'),
         done: const Text("Done",
             style: TextStyle(
