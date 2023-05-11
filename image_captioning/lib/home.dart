@@ -79,8 +79,10 @@ class HomeScene extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomInset: false,
-      drawer: Container(color: Colors.black,
-          child: const SideBar()),
+      drawer: Container(
+          color: Colors.black,
+          child: const SideBar()
+      ),
       extendBodyBehindAppBar: true,
       appBar: AppBar(
         leading: Builder(
