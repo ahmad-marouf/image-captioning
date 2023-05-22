@@ -1,6 +1,6 @@
 
+import 'dart:async';
 import 'dart:io';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:image_captioning/preview_page.dart';
@@ -47,7 +47,9 @@ class GalleryScreenState extends State<GalleryScreen>{
 
   @override
   Widget build(BuildContext context) {
-    pickImage();
+    Timer(const Duration(seconds: 1),(){
+      pickImage();
+    }) ;
 
     return Scaffold(
       backgroundColor: Colors.grey[900],

@@ -42,17 +42,21 @@ class _CaptionGeneratorState extends State<CaptionGenerator> {
       height: img?.height.toDouble(),
     );
 
-    if (context.mounted) {
-      Navigator.of(context).pushReplacement(
-          SlideAnimation(
-              beginX: 1,
-              page: PreviewPage(
-                image: image,
-                caption: caption!,
-              )
-          )
-      );
-    }
+
+    Future.delayed(const Duration(seconds: 1),() {
+      if (context.mounted)  {
+        Navigator.of(context).pushReplacement(
+            SlideAnimation(
+                beginX: 1,
+                page: PreviewPage(
+                  image: image,
+                  caption: caption!,
+                )
+            )
+        );
+      }
+    } );
+
   }
 
   @override
@@ -94,6 +98,7 @@ class PreviewPage extends StatelessWidget {
     await flutterTts.setPitch(1);
     await flutterTts.speak(caption);
   }
+
 
   @override
   Widget build(BuildContext context) {
