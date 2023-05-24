@@ -89,7 +89,7 @@ class HomeScene extends StatelessWidget {
             builder: (context){
               return IconButton(
                   onPressed: ()=>Scaffold.of(context).openDrawer(),
-                  icon: Icon(Icons.menu));
+                  icon: const Icon(Icons.menu));
             },
         ),
         centerTitle: true,
@@ -97,7 +97,7 @@ class HomeScene extends StatelessWidget {
         elevation: 0,
         shadowColor: Colors.transparent,
         backgroundColor: Colors.transparent,
-        actions: [
+        /*actions: [
           IconButton(
             onPressed: () {
               showDialog(
@@ -116,7 +116,7 @@ class HomeScene extends StatelessWidget {
             color: Colors.white,
             tooltip: 'HELP',
           )
-        ],
+        ],*/
       ),
       body: Stack(
           fit: StackFit.expand,
@@ -127,10 +127,10 @@ class HomeScene extends StatelessWidget {
         ),
         Positioned.fill(
             child: BackdropFilter(
-          filter: ImageFilter.blur(
-              sigmaX: 10,
-              sigmaY: 10),
-          child: const SizedBox(),
+              filter: ImageFilter.blur(
+                  sigmaX: 10,
+                  sigmaY: 10),
+              child: const SizedBox(),
         )),
         SlideTransition(
           position: Tween<Offset>(

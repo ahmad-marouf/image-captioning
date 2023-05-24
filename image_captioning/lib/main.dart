@@ -7,6 +7,7 @@ import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import 'IntroScreen.dart';
+import 'home.dart';
 
 void main(){
   SystemChrome.setSystemUIOverlayStyle(
@@ -47,23 +48,24 @@ class Splash extends StatefulWidget {
 }
 
 class SplashState extends State<Splash> with AfterLayoutMixin<Splash> {
+
   Future checkFirstSeen() async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
-    /*bool _seen = (prefs.getBool('seen') ?? false);
+    bool _seen = (prefs.getBool('seen') ?? false);
 
     if (_seen) {
       Navigator.of(context).pushReplacement(
-          new MaterialPageRoute(builder: (context) => new homeState()));
+           MaterialPageRoute(builder: (context) =>  const HomeState()));
     } else {
       await prefs.setBool('seen', true);
       Navigator.of(context).pushReplacement(
-          new MaterialPageRoute(builder: (context) => new IntroScreen()));
-    }*/
+           MaterialPageRoute(builder: (context) =>  IntroScreen()));
+    }
 
-    Navigator.of(context).pushReplacement(
+    /*Navigator.of(context).pushReplacement(
         MaterialPageRoute(builder: (context) => IntroScreen()
         )
-    );
+    );*/
 
   }
 
@@ -72,6 +74,7 @@ class SplashState extends State<Splash> with AfterLayoutMixin<Splash> {
 
   @override
   Widget build(BuildContext context) {
+    checkFirstSeen();
     return const MaterialApp(
       home: Center(
         child: CircularProgressIndicator(),

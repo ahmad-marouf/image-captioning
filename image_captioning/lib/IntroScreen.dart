@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:flutter_glow/flutter_glow.dart';
-import 'package:image_captioning/main.dart';
-import 'package:image_captioning/shared_components.dart';
 import 'package:image_captioning/slideAnimation.dart';
 import 'home.dart';
 import 'package:introduction_screen/introduction_screen.dart';
@@ -17,39 +14,35 @@ class IntroScreen extends StatefulWidget {
 class _IntroScreenState extends State<IntroScreen> {
   List<PageViewModel> listPagesViewModel = [
     PageViewModel(
-      title: "Title of introduction page",
-      body: "Welcome to the app! This is a description of how it works.",
+      title: "Welcome to ICG application",
+      body: "Our team represent to you application can help many blind people to define objects in their way",
       image: const Center(
-        child: Icon(Icons.waving_hand, size: 50.0),
+        child: Image(image: AssetImage("assets/image/Team.jpg"),
+          fit: BoxFit.fill,
+        width: 250,
+        height: 200,)
       ),
     ),
     PageViewModel(
-      title: "Title of blue page",
-      body: "Welcome to the app! This is a description on a page with a blue background.",
-      image: Center(
-        child: Image.network("https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg", height: 175.0),
-      ),
-      decoration: const PageDecoration(
-        pageColor: Colors.blue,
-      ),
-    ),PageViewModel(
-      title: "Title of orange text and bold page",
-      body: "This is a description on a page with an orange title and bold, big body.",
+      title: "Methods of image caption in our App",
+      body: "1. Image caption using camera of glasses.\n"
+          "2. Image caption using camera of mobile phone.\n"
+          "3. Image caption using the gallery of mobile phone.",
       image: const Center(
-        child: Text("👋", style: TextStyle(fontSize: 100.0)),
-      ),
-      decoration: const PageDecoration(
-        titleTextStyle: TextStyle(color: Colors.orange),
-        bodyTextStyle: TextStyle(fontWeight: FontWeight.w700, fontSize: 20.0),
+        child: Image(image: AssetImage("assets/image/methods definition.jpg"),
+        fit: BoxFit.fill,
+        width: 300,),
       ),
     ),
     PageViewModel(
-      title: "Title of custom button page",
-      body: "This is a description on a page with a custom button below.",
-      footer: Padding(
-        padding: EdgeInsets.all(20),
-        child: SizedBox(),
+      title: "That's all, hope you find app is useful, Enjoy!",
+      body: "",
+      image: const Center(
+        child: Icon(Icons.waving_hand, size: 100),
       ),
+        decoration: const PageDecoration(
+            titleTextStyle: TextStyle(fontSize: 30),
+            imagePadding: EdgeInsets.only(bottom: 30))
     )];
 
   @override

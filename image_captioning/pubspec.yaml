@@ -75,6 +75,7 @@ dependencies:
   after_layout: ^1.2.0
   fluttertoast: ^8.2.1
 
+
 #dependency_overrides:
 #  camera_android:
 #    git:

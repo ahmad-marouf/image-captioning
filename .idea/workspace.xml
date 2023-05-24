@@ -9,20 +9,15 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c0cf96fa-60fe-4e56-b251-04010795af08" name="Changes" comment="put loader as in shared_components.dart">
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_4_26_2023_10_58_PM_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_4_26_2023_10_58_PM__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_5_6_2023_4_14_PM_[Changes]1/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_5_6_2023_4_14_PM__Changes_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_5_6_2023_8_45_PM_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_5_6_2023_8_45_PM__Changes_.xml" beforeDir="false" />
+    <list default="true" id="c0cf96fa-60fe-4e56-b251-04010795af08" name="Changes" comment="remove glowing buttom">
+      <change afterPath="$PROJECT_DIR$/image_captioning/assets/image/Team.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image_captioning/assets/image/methods definition.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_captioning/assets/image/Waves Alt.png" beforeDir="false" afterPath="$PROJECT_DIR$/image_captioning/assets/image/Waves Alt.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/image_captioning/lib/IntroScreen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/image_captioning/lib/IntroScreen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/image_captioning/lib/gallery_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/image_captioning/lib/gallery_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/image_captioning/lib/glowing_button.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image_captioning/lib/preview_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/image_captioning/lib/preview_page.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/image_captioning/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/image_captioning/pubspec.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_captioning/lib/home.dart" beforeDir="false" afterPath="$PROJECT_DIR$/image_captioning/lib/home.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_captioning/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/image_captioning/lib/main.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_captioning/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/image_captioning/pubspec.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,11 +67,11 @@
       <recent name="C:\Users\karim\StudioProjects\image_captioning\image_captioning\assets\rive" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\karim\StudioProjects\image_captioning\image_captioning\assets\rive" />
       <recent name="C:\Users\karim\StudioProjects\image_captioning\image_captioning\assets\image" />
+      <recent name="C:\Users\karim\StudioProjects\image_captioning\image_captioning\assets\tflite_models" />
+      <recent name="C:\Users\karim\StudioProjects\image_captioning\image_captioning\assets\rive" />
       <recent name="C:\Users\karim\StudioProjects\image_captioning\image_captioning\assets\RiveAssets" />
       <recent name="C:\Users\karim\StudioProjects\image_captioning\image_captioning\assets\RiveAssests" />
-      <recent name="C:\Users\karim\StudioProjects\image_captioning\image_captioning\assets\tflite_models" />
     </key>
   </component>
   <component name="RunManager">
@@ -220,7 +215,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683488685530</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="remove glowing buttom">
+      <created>1684754533735</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1684754533735</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -250,6 +252,7 @@
     <MESSAGE value="menak lelah ya kiro" />
     <MESSAGE value="add new loader to the app with Rive module" />
     <MESSAGE value="put loader as in shared_components.dart" />
-    <option name="LAST_COMMIT_MESSAGE" value="put loader as in shared_components.dart" />
+    <MESSAGE value="remove glowing buttom" />
+    <option name="LAST_COMMIT_MESSAGE" value="remove glowing buttom" />
   </component>
 </project>
