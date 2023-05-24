@@ -46,21 +46,12 @@ class Encoder {
             options: InterpreterOptions()..threads = 4,
           );
 
-      // print('Encoder Inputs:');
-      // var inputTensors = _interpreter?.getInputTensors();
-      // inputTensors?.forEach((tensor) {
-      //   print(tensor.type);
-      // });
-
-      // print('Encoder Outputs:');
       var outputTensors = _interpreter?.getOutputTensors();
       _outputShapes = [];
       outputTensors?.forEach((tensor) {
         _outputShapes.add(tensor.shape);
-        // print(tensor.shape);
       });
 
-      // print(_interpreter?.getInputTensors());
     } catch (e) {
       print("Error while creating interpreter: $e");
     }
@@ -78,20 +69,17 @@ class Encoder {
 
     // Convert RGB to BGR
     imageLib.remapColors(image, red: imageLib.Channel.blue, blue: imageLib.Channel.red);
-    // imageLib.normalize(image, 0, 1);
-    // imageLib.colorOffset(image, red: 123.68.toInt(), green: 116.779.toInt(), blue: 103.939.toInt());
-    // imageLib.colorOffset(image, red: -103.939.toInt(), green: -116.779.toInt(), blue: -123.68.toInt());
 
     // Create TensorImage from image
-    TensorImage inputImage = TensorImage.fromImage(image);
+    TensorImage inputImage = TensorImage(TfLiteType.float32);
+    inputImage.loadImage(image);
 
 
     // Create ImageProcessor
     imageProcessor = ImageProcessorBuilder()
     // Resizing to input size
         .add(ResizeOp(inputImgSize, inputImgSize, ResizeMethod.BILINEAR))
-        // .add(NormalizeOp.multipleChannels([0.406, 0.456, 0.485], [0.225, 0.224, 0.229]))
-        // .add(NormalizeOp.multipleChannels([0.485, 0.456, 0.406], [0.229, 0.224, 0.225]))
+        .add(NormalizeOp.multipleChannels([103.939, 116.779, 123.68], [1, 1, 1]))
         .build();
 
     inputImage = imageProcessor.process(inputImage);

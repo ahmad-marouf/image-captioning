@@ -17,13 +17,18 @@ class Decoder {
   // Shapes of output tensors
   late List<List<int>> _inputShapes;
   late List<List<int>> _outputShapes;
+  late List<int> _outputOrder;
+  final List<int> _trueOrder = [0,1,12,23,24,25,26,27,28,29,
+    2,3,4,5,6,7,8,9,10,11,13,14,
+    15,16,17,18,19,20,21,22];
 
 
   /// Text Processing
   final _vocabFile = "tflite_models/word_dict.json";
   late Map vocabDict;
 
-  final int _maxLen = 24;
+  final int _maxLen = 30;
+  final int _vocabSize = 26637;
   final String _startTok = 'startseq';
   final String _endTok = 'endseq';
 
@@ -65,15 +70,17 @@ class Decoder {
       _inputShapes = [];
       inputTensors?.forEach((tensor) {
         _inputShapes.add(tensor.shape);
-        // print(tensor.type);
+        // print(tensor.shape);
       });
 
       // print('Decoder Outputs:');
       var outputTensors = _interpreter?.getOutputTensors();
       _outputShapes = [];
+      _outputOrder = [];
       outputTensors?.forEach((tensor) {
         _outputShapes.add(tensor.shape);
-        // print(tensor.shape);
+        _outputOrder.add(int.parse(tensor.name.substring(24)));
+        // print(tensor.name);
       });
 
     } catch (e) {
@@ -101,13 +108,13 @@ class Decoder {
     featsBuffer.loadBuffer(features, shape: [1,2048]);
 
     // Create inputs list
-    List<ByteBuffer> inputs = [featsBuffer.buffer, textBuffer.buffer, hidden1Buffer.buffer, hidden2Buffer.buffer];
+    List<ByteBuffer> inputs = [hidden1Buffer.buffer, hidden2Buffer.buffer, textBuffer.buffer, featsBuffer.buffer];
 
 
     // Create map of lists for output tensor buffers
     Map<int, List<List<double>>> outputs = {};
     for (int i =0; i < _maxLen; i++) {
-      outputs[i] = [List<double>.filled(7378, 0.0)];
+      outputs[i] = [List<double>.filled(_vocabSize, 0.0)];
     }
 
 
@@ -116,16 +123,19 @@ class Decoder {
 
     // Convert output to string
     String caption = "";
-    for (Object o in outputs.values) {
-      List<double> singleOut = List<List<double>>.from(o as List<List<dynamic>>)[0];
+    for (int i = 0; i < _outputOrder.length; i++) {
+      List<double> singleOut = List<List<double>>.from(
+          outputs[_outputOrder.indexOf(_trueOrder[i])]
+          as List<List<dynamic>>)[0];
+
       double maxValue = singleOut.reduce(max);
       int maxIndex = singleOut.indexOf(maxValue);
       var key = vocabDict.keys.firstWhere((k) => vocabDict[k] == maxIndex, orElse: () => " ");
-      if (key != _endTok) {
-        caption += "$key ";
+      if (key == _endTok) {
+        break;
       }
+      caption += "$key ";
     }
-
 
     return caption;
   }
