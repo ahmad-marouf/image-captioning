@@ -74,6 +74,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   after_layout: ^1.2.0
   fluttertoast: ^8.2.1
+  image_cropper: ^4.0.1
 
 
 #dependency_overrides:
