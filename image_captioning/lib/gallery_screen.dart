@@ -6,6 +6,7 @@ import 'package:flutter/services.dart';
 import 'package:image_captioning/preview_page.dart';
 import 'package:image_captioning/shared_components.dart';
 import 'package:image_captioning/slideAnimation.dart';
+import 'package:image_cropper/image_cropper.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:loading_animations/loading_animations.dart';
 import 'package:rive/rive.dart';
@@ -16,7 +17,8 @@ class GalleryScreen extends StatefulWidget{
 }
 
 class GalleryScreenState extends State<GalleryScreen>{
-  File? image;
+  Image ? image;
+  Image ? pickedImage;
 
   Future pickImage()async{
     try {
@@ -27,7 +29,6 @@ class GalleryScreenState extends State<GalleryScreen>{
         }
         return;
       }
-
 
       Uint8List pngBytes = await image.readAsBytes();
       if (mounted) {
@@ -43,7 +44,11 @@ class GalleryScreenState extends State<GalleryScreen>{
     } on PlatformException catch (e) {
       print("Failed to pick an image: $e");
     }
+    setState(() {
+      pickedImage = image;
+    });
     }
+
 
   @override
   Widget build(BuildContext context) {

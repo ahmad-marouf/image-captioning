@@ -82,6 +82,7 @@ class _CameraPageState extends State<CameraPage> {
           child: Stack(children: [
             (_cameraController.value.isInitialized)
                 ? Container(
+                //height: double.infinity,
                 width: double.infinity,
                 child: CameraPreview(_cameraController))
                 : Container(
@@ -90,10 +91,10 @@ class _CameraPageState extends State<CameraPage> {
             Align(
                 alignment: Alignment.bottomCenter,
                 child: Container(
-                  height: MediaQuery.of(context).size.height * 0.20,
+                  height: MediaQuery.of(context).size.height * 0.2,
                   decoration: const BoxDecoration(
-                      borderRadius: BorderRadius.vertical(top: Radius.circular(24)),
-                      color: Colors.black),
+                      color: Colors.black,
+                  ),
                   child:
                   Row(crossAxisAlignment: CrossAxisAlignment.center, children: [
                     Expanded(
@@ -123,7 +124,7 @@ class _CameraPageState extends State<CameraPage> {
                     ),
                     const Spacer(),
                   ]),
-                )
+                ),
             ),
           ]),
         )
