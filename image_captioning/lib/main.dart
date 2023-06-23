@@ -1,13 +1,13 @@
 import 'dart:async';
-
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:after_layout/after_layout.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-
-import 'IntroScreen.dart';
-import 'home.dart';
+import 'model/decoder.dart';
+import 'model/encoder.dart';
+import 'pages/IntroScreen.dart';
+import 'pages/Home/home.dart';
 
 void main(){
   SystemChrome.setSystemUIOverlayStyle(
@@ -30,7 +30,7 @@ class ConstructionApp extends StatelessWidget{
     return MaterialApp(
       title: 'Capture Image Generator',
       debugShowCheckedModeBanner: false,
-      home: const Splash(),
+      home:  Splash(),
       builder: EasyLoading.init(),
       theme: ThemeData(
         brightness: Brightness.dark,
@@ -41,15 +41,20 @@ class ConstructionApp extends StatelessWidget{
 }
 
 class Splash extends StatefulWidget {
-  const Splash({super.key});
+   Splash({super.key});
 
   @override
   SplashState createState() => SplashState();
 }
 
 class SplashState extends State<Splash> with AfterLayoutMixin<Splash> {
+  late Encoder encoder;
+  late Decoder decoder;
 
   Future checkFirstSeen() async {
+    encoder = await Encoder.instance;
+    decoder = await Decoder.instance;
+
     SharedPreferences prefs = await SharedPreferences.getInstance();
     bool _seen = (prefs.getBool('seen') ?? false);
 

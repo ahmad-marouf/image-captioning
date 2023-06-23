@@ -1,18 +1,16 @@
 import 'dart:async';
 import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:image_captioning/shared_components.dart';
-import 'package:image_captioning/side_bar_screen.dart';
-import 'package:image_captioning/slideAnimation.dart';
+import 'package:image_captioning/components/shared_components.dart';
+import 'package:image_captioning/pages/Home/side_bar_screen.dart';
+import 'package:image_captioning/components/slideAnimation.dart';
 import 'package:rive/rive.dart';
-import 'external_connection/esp_wifi.dart';
-import 'firstScene.dart';
-import 'camera_page.dart';
+import '../../external_connection/esp_wifi.dart';
+import '../../model/decoder.dart';
+import '../../model/encoder.dart';
+import '../camera/camera_page.dart';
 import 'package:camera/camera.dart';
-import 'package:image_captioning/model/decoder.dart';
-import 'package:image_captioning/model/encoder.dart';
-
-import 'gallery_screen.dart';
+import '../gallery/gallery_screen.dart';
 
 class HomeState extends StatefulWidget {
   const HomeState({Key? key}) : super(key: key);
@@ -24,7 +22,9 @@ class HomeState extends StatefulWidget {
 class _HomeState extends State<HomeState> with TickerProviderStateMixin{
   late final AnimationController _controller;
   late final Animation<double> _animation;
-   DateTime? _currentBackPressTime;
+  DateTime? _currentBackPressTime;
+ /* late Encoder encoder;
+  late Decoder decoder;*/
 
   @override
   Widget build(BuildContext context) => WillPopScope(
@@ -48,6 +48,13 @@ class _HomeState extends State<HomeState> with TickerProviderStateMixin{
 
   @override
   void initState(){
+    /*
+      encoder = () async{
+        await Encoder.instance;
+      } as Encoder;
+      decoder = () async{
+        await Decoder.instance;
+      } as Decoder;*/
 
     _controller = AnimationController(
       duration: const Duration(milliseconds: 500),

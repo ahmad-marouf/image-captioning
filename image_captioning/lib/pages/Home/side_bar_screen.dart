@@ -2,8 +2,8 @@ import 'dart:io';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:image_captioning/IntroScreen.dart';
-import 'package:image_captioning/slideAnimation.dart';
+import 'package:image_captioning/pages/IntroScreen.dart';
+import 'package:image_captioning/components/slideAnimation.dart';
 
 class SideBar extends StatelessWidget{
   const SideBar({super.key});

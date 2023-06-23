@@ -3,13 +3,12 @@ import 'dart:async';
 import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:image_captioning/preview_page.dart';
-import 'package:image_captioning/shared_components.dart';
-import 'package:image_captioning/slideAnimation.dart';
+import 'package:image_captioning/pages/preview_page.dart';
+import 'package:image_captioning/components/shared_components.dart';
+import 'package:image_captioning/components/slideAnimation.dart';
 import 'package:image_cropper/image_cropper.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:loading_animations/loading_animations.dart';
-import 'package:rive/rive.dart';
+
 
 class GalleryScreen extends StatefulWidget{
   @override

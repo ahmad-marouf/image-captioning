@@ -5,12 +5,12 @@ import 'dart:ui' as ui;
 import 'dart:async';
 
 import 'package:gesture_zoom_box/gesture_zoom_box.dart';
-import 'package:image_captioning/shared_components.dart';
+import 'package:image_captioning/components/shared_components.dart';
 import 'package:web_socket_channel/web_socket_channel.dart';
 
-import 'package:image_captioning/slideAnimation.dart';
+import 'package:image_captioning/components/slideAnimation.dart';
 import 'package:image_captioning/external_connection/esp_wifi.dart';
-import 'package:image_captioning/preview_page.dart';
+import 'package:image_captioning/pages/preview_page.dart';
 
 
 class WifiStream extends StatefulWidget {
@@ -151,7 +151,7 @@ class WifiStreamState extends State<WifiStream> {
     );
   }
 
-  takeScreenShot() async {
+    takeScreenShot() async {
     final RenderRepaintBoundary boundary = _globalKey.currentContext!.findRenderObject()! as RenderRepaintBoundary;
     final ui.Image image = await boundary.toImage();
     var byteData = await image.toByteData(format: ui.ImageByteFormat.png);

@@ -29,7 +29,9 @@ environment:
 # versions available, run `flutter pub outdated`.
 dependencies:
   flutter_glow: ^0.3.0
+
   flutter_tts: ^3.6.3
+
   flutter:
     sdk: flutter
 

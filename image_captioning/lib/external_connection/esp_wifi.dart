@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:gps_connectivity/gps_connectivity.dart';
-import 'package:image_captioning/shared_components.dart';
+import 'package:image_captioning/components/shared_components.dart';
 
 import 'package:location/location.dart';
 import 'package:open_settings/open_settings.dart';

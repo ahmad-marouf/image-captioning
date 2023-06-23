@@ -12,7 +12,7 @@
         <entry key="android_flutter_wifi">
           <value>
             <list>
-              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/android_flutter_wifi-0.1.1/lib" />
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/android_flutter_wifi-0.1.2/lib" />
             </list>
           </value>
         </entry>
@@ -26,7 +26,7 @@
         <entry key="args">
           <value>
             <list>
-              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/args-2.4.1/lib" />
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/args-2.4.2/lib" />
             </list>
           </value>
         </entry>
@@ -47,35 +47,35 @@
         <entry key="camera">
           <value>
             <list>
-              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/camera-0.10.5/lib" />
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/camera-0.10.5+2/lib" />
             </list>
           </value>
         </entry>
         <entry key="camera_android">
           <value>
             <list>
-              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/camera_android-0.10.8+1/lib" />
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/camera_android-0.10.8+2/lib" />
             </list>
           </value>
         </entry>
         <entry key="camera_avfoundation">
           <value>
             <list>
-              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/camera_avfoundation-0.9.13+1/lib" />
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/camera_avfoundation-0.9.13+2/lib" />
             </list>
           </value>
         </entry>
         <entry key="camera_platform_interface">
           <value>
             <list>
-              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/camera_platform_interface-2.5.0/lib" />
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/camera_platform_interface-2.5.1/lib" />
             </list>
           </value>
         </entry>
         <entry key="camera_web">
           <value>
             <list>
-              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/camera_web-0.3.1+3/lib" />
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/camera_web-0.3.1+4/lib" />
             </list>
           </value>
         </entry>
@@ -198,6 +198,34 @@
             </list>
           </value>
         </entry>
+        <entry key="file_selector_linux">
+          <value>
+            <list>
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/file_selector_linux-0.9.1+3/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="file_selector_macos">
+          <value>
+            <list>
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/file_selector_macos-0.9.2/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="file_selector_platform_interface">
+          <value>
+            <list>
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/file_selector_platform_interface-2.6.0/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="file_selector_windows">
+          <value>
+            <list>
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/file_selector_windows-0.9.2/lib" />
+            </list>
+          </value>
+        </entry>
         <entry key="flutter">
           <value>
             <list>
@@ -285,7 +313,7 @@
         <entry key="flutter_plugin_android_lifecycle">
           <value>
             <list>
-              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_plugin_android_lifecycle-2.0.14/lib" />
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_plugin_android_lifecycle-2.0.15/lib" />
             </list>
           </value>
         </entry>
@@ -313,7 +341,7 @@
         <entry key="flutter_tts">
           <value>
             <list>
-              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_tts-3.6.3/lib" />
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_tts-3.7.0/lib" />
             </list>
           </value>
         </entry>
@@ -327,7 +355,7 @@
         <entry key="fluttertoast">
           <value>
             <list>
-              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/fluttertoast-8.2.1/lib" />
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/fluttertoast-8.2.2/lib" />
             </list>
           </value>
         </entry>
@@ -348,7 +376,7 @@
         <entry key="graphs">
           <value>
             <list>
-              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/graphs-2.3.0/lib" />
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/graphs-2.3.1/lib" />
             </list>
           </value>
         </entry>
@@ -373,38 +401,80 @@
             </list>
           </value>
         </entry>
+        <entry key="image_cropper">
+          <value>
+            <list>
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/image_cropper-4.0.1/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="image_cropper_for_web">
+          <value>
+            <list>
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/image_cropper_for_web-2.0.0/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="image_cropper_platform_interface">
+          <value>
+            <list>
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/image_cropper_platform_interface-4.0.0/lib" />
+            </list>
+          </value>
+        </entry>
         <entry key="image_picker">
           <value>
             <list>
-              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/image_picker-0.8.7+5/lib" />
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/image_picker-0.8.9/lib" />
             </list>
           </value>
         </entry>
         <entry key="image_picker_android">
           <value>
             <list>
-              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/image_picker_android-0.8.6+14/lib" />
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/image_picker_android-0.8.7+3/lib" />
             </list>
           </value>
         </entry>
         <entry key="image_picker_for_web">
           <value>
             <list>
-              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/image_picker_for_web-2.1.12/lib" />
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/image_picker_for_web-2.2.0/lib" />
             </list>
           </value>
         </entry>
         <entry key="image_picker_ios">
           <value>
             <list>
-              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/image_picker_ios-0.8.7+4/lib" />
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/image_picker_ios-0.8.8/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="image_picker_linux">
+          <value>
+            <list>
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/image_picker_linux-0.2.1/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="image_picker_macos">
+          <value>
+            <list>
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/image_picker_macos-0.2.1/lib" />
             </list>
           </value>
         </entry>
         <entry key="image_picker_platform_interface">
           <value>
             <list>
-              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/image_picker_platform_interface-2.6.3/lib" />
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/image_picker_platform_interface-2.8.0/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="image_picker_windows">
+          <value>
+            <list>
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/image_picker_windows-0.2.1/lib" />
             </list>
           </value>
         </entry>
@@ -485,6 +555,13 @@
             </list>
           </value>
         </entry>
+        <entry key="mime">
+          <value>
+            <list>
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/mime-1.0.4/lib" />
+            </list>
+          </value>
+        </entry>
         <entry key="network_info_plus">
           <value>
             <list>
@@ -544,7 +621,7 @@
         <entry key="path_provider_linux">
           <value>
             <list>
-              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/path_provider_linux-2.1.10/lib" />
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/path_provider_linux-2.1.11/lib" />
             </list>
           </value>
         </entry>
@@ -565,28 +642,28 @@
         <entry key="permission_handler">
           <value>
             <list>
-              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/permission_handler-10.2.0/lib" />
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/permission_handler-10.3.0/lib" />
             </list>
           </value>
         </entry>
         <entry key="permission_handler_android">
           <value>
             <list>
-              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/permission_handler_android-10.2.1/lib" />
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/permission_handler_android-10.2.3/lib" />
             </list>
           </value>
         </entry>
         <entry key="permission_handler_apple">
           <value>
             <list>
-              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/permission_handler_apple-9.0.8/lib" />
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/permission_handler_apple-9.1.0/lib" />
             </list>
           </value>
         </entry>
         <entry key="permission_handler_platform_interface">
           <value>
             <list>
-              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/permission_handler_platform_interface-3.9.0/lib" />
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/permission_handler_platform_interface-3.10.0/lib" />
             </list>
           </value>
         </entry>
@@ -656,7 +733,7 @@
         <entry key="shared_preferences">
           <value>
             <list>
-              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/shared_preferences-2.1.1/lib" />
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/shared_preferences-2.1.2/lib" />
             </list>
           </value>
         </entry>
@@ -761,7 +838,7 @@
         <entry key="tflite_flutter">
           <value>
             <list>
-              <option value="$USER_HOME$/AppData/Local/Pub/Cache/git/tflite_flutter_plugin-87f616fd1fdbb61494eab9e0f074ee132440cd5d//lib" />
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/git/tflite_flutter_plugin-003c6b0017b6bfba87c86d416c4be1a16d03afc4//lib" />
             </list>
           </value>
         </entry>
@@ -775,7 +852,7 @@
         <entry key="tuple">
           <value>
             <list>
-              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/tuple-2.0.1/lib" />
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/tuple-2.0.2/lib" />
             </list>
           </value>
         </entry>
@@ -832,18 +909,18 @@
     </properties>
     <CLASSES>
       <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/git/tflite_flutter_helper-ff6592fe0c23722520c0c7697ecd2498dc055628//lib" />
-      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/git/tflite_flutter_plugin-87f616fd1fdbb61494eab9e0f074ee132440cd5d//lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/git/tflite_flutter_plugin-003c6b0017b6bfba87c86d416c4be1a16d03afc4//lib" />
       <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/after_layout-1.2.0/lib" />
-      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/android_flutter_wifi-0.1.1/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/android_flutter_wifi-0.1.2/lib" />
       <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/archive-3.3.7/lib" />
-      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/args-2.4.1/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/args-2.4.2/lib" />
       <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/async-2.10.0/lib" />
       <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/boolean_selector-2.1.1/lib" />
-      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/camera-0.10.5/lib" />
-      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/camera_android-0.10.8+1/lib" />
-      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/camera_avfoundation-0.9.13+1/lib" />
-      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/camera_platform_interface-2.5.0/lib" />
-      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/camera_web-0.3.1+3/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/camera-0.10.5+2/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/camera_android-0.10.8+2/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/camera_avfoundation-0.9.13+2/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/camera_platform_interface-2.5.1/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/camera_web-0.3.1+4/lib" />
       <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/characters-1.2.1/lib" />
       <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/checked_yaml-2.0.3/lib" />
       <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/cli_util-0.3.5/lib" />
@@ -861,6 +938,10 @@
       <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/fake_async-1.3.1/lib" />
       <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/ffi-1.2.1/lib" />
       <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/file-6.1.4/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/file_selector_linux-0.9.1+3/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/file_selector_macos-0.9.2/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/file_selector_platform_interface-2.6.0/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/file_selector_windows-0.9.2/lib" />
       <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_bluetooth_serial-0.4.0/lib" />
       <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_easyloading-3.0.5/lib" />
       <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_glow-0.3.0/lib" />
@@ -872,22 +953,28 @@
       <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_keyboard_visibility_windows-1.0.0/lib" />
       <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_launcher_icons-0.11.0/lib" />
       <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_lints-2.0.1/lib" />
-      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_plugin_android_lifecycle-2.0.14/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_plugin_android_lifecycle-2.0.15/lib" />
       <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_spinkit-5.2.0/lib" />
       <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_svprogresshud-1.0.0/lib" />
-      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_tts-3.6.3/lib" />
-      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/fluttertoast-8.2.1/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_tts-3.7.0/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/fluttertoast-8.2.2/lib" />
       <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/gesture_zoom_box-0.0.4/lib" />
       <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/gps_connectivity-0.0.4/lib" />
-      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/graphs-2.3.0/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/graphs-2.3.1/lib" />
       <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/http-0.13.6/lib" />
       <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/http_parser-4.0.2/lib" />
       <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/image-3.3.0/lib" />
-      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/image_picker-0.8.7+5/lib" />
-      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/image_picker_android-0.8.6+14/lib" />
-      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/image_picker_for_web-2.1.12/lib" />
-      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/image_picker_ios-0.8.7+4/lib" />
-      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/image_picker_platform_interface-2.6.3/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/image_cropper-4.0.1/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/image_cropper_for_web-2.0.0/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/image_cropper_platform_interface-4.0.0/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/image_picker-0.8.9/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/image_picker_android-0.8.7+3/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/image_picker_for_web-2.2.0/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/image_picker_ios-0.8.8/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/image_picker_linux-0.2.1/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/image_picker_macos-0.2.1/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/image_picker_platform_interface-2.8.0/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/image_picker_windows-0.2.1/lib" />
       <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/introduction_screen-3.1.8/lib" />
       <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/js-0.6.5/lib" />
       <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/json_annotation-4.8.1/lib" />
@@ -899,6 +986,7 @@
       <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/matcher-0.12.13/lib" />
       <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/material_color_utilities-0.2.0/lib" />
       <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/meta-1.8.0/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/mime-1.0.4/lib" />
       <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/network_info_plus-3.0.5/lib" />
       <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/network_info_plus_platform_interface-1.1.3/lib" />
       <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/nm-0.5.0/lib" />
@@ -907,13 +995,13 @@
       <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/path_provider-2.0.15/lib" />
       <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/path_provider_android-2.0.27/lib" />
       <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/path_provider_foundation-2.2.3/lib" />
-      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/path_provider_linux-2.1.10/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/path_provider_linux-2.1.11/lib" />
       <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/path_provider_platform_interface-2.0.6/lib" />
       <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/path_provider_windows-2.0.7/lib" />
-      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/permission_handler-10.2.0/lib" />
-      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/permission_handler_android-10.2.1/lib" />
-      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/permission_handler_apple-9.0.8/lib" />
-      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/permission_handler_platform_interface-3.9.0/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/permission_handler-10.3.0/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/permission_handler_android-10.2.3/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/permission_handler_apple-9.1.0/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/permission_handler_platform_interface-3.10.0/lib" />
       <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/permission_handler_windows-0.1.2/lib" />
       <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/petitparser-5.1.0/lib" />
       <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/photo_view-0.14.0/lib" />
@@ -923,7 +1011,7 @@
       <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/process-4.2.4/lib" />
       <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/quiver-3.2.1/lib" />
       <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/rive-0.9.1/lib" />
-      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/shared_preferences-2.1.1/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/shared_preferences-2.1.2/lib" />
       <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/shared_preferences_android-2.1.4/lib" />
       <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/shared_preferences_foundation-2.2.2/lib" />
       <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/shared_preferences_linux-2.2.0/lib" />
@@ -937,7 +1025,7 @@
       <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/string_scanner-1.2.0/lib" />
       <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/term_glyph-1.2.1/lib" />
       <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/test_api-0.4.16/lib" />
-      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/tuple-2.0.1/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/tuple-2.0.2/lib" />
       <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/typed_data-1.3.2/lib" />
       <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/vector_math-2.1.4/lib" />
       <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/web_socket_channel-2.4.0/lib" />

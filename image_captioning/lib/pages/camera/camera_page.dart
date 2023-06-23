@@ -1,8 +1,8 @@
 import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:image_captioning/slideAnimation.dart';
-import 'preview_page.dart';
+import 'package:image_captioning/components/slideAnimation.dart';
+import '../preview_page.dart';
 import 'package:flutter/services.dart';
 
 class CameraPage extends StatefulWidget {

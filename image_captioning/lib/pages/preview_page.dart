@@ -4,13 +4,11 @@ import 'package:flutter/material.dart';
 import 'package:image/image.dart' as imageLib;
 
 import 'package:flutter/services.dart';
-import 'package:loading_animations/loading_animations.dart';
-import 'package:image_captioning/slideAnimation.dart';
-import 'package:image_captioning/shared_components.dart';
+import 'package:image_captioning/components/slideAnimation.dart';
+import 'package:image_captioning/components/shared_components.dart';
 import 'package:image_captioning/model/encoder.dart';
 import 'package:image_captioning/model/decoder.dart';
 import 'package:flutter_tts/flutter_tts.dart';
-import 'package:rive/rive.dart';
 
 class CaptionGenerator extends StatefulWidget {
   const CaptionGenerator({Key? key, required this.imageBytes}) : super(key: key);

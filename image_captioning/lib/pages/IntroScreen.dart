@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_glow/flutter_glow.dart';
-import 'package:image_captioning/slideAnimation.dart';
-import 'home.dart';
+import 'package:image_captioning/components/slideAnimation.dart';
+import 'Home/home.dart';
 import 'package:introduction_screen/introduction_screen.dart';
 
 class IntroScreen extends StatefulWidget {
