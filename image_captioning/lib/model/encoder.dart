@@ -58,9 +58,12 @@ class Encoder {
   }
 
   /// Pre-process the image
-  Future<TensorBuffer?> _getProcessedImage(Uint8List imageBytes) async {
+  Future<TensorBuffer?> _getProcessedImage(Uint8List imageBytes, bool rotateImage) async {
 
     imageLib.Image? image = imageLib.decodeImage(imageBytes);
+    if (rotateImage) {
+      image = imageLib.copyRotate(image!, -90);
+    }
 
     if (image == null) {
       print("Could not load image");
@@ -91,7 +94,7 @@ class Encoder {
   }
 
   /// Runs object detection on the input image
-  Future<ByteBuffer?> predict(Uint8List imageBytes) async {
+  Future<ByteBuffer?> predict(Uint8List imageBytes, bool rotateImage) async {
 
     if (_interpreter == null) {
       print("Interpreter not initialized");
@@ -99,7 +102,7 @@ class Encoder {
     }
 
     // Pre-process input image to get input TensorBuffer
-    TensorBuffer? inputBuffer = await _getProcessedImage(imageBytes);
+    TensorBuffer? inputBuffer = await _getProcessedImage(imageBytes, rotateImage);
     if (inputBuffer == null) {
       return null;
     }

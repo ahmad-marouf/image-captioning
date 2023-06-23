@@ -16,8 +16,9 @@ class GalleryScreen extends StatefulWidget{
 }
 
 class GalleryScreenState extends State<GalleryScreen>{
-  Image ? image;
-  Image ? pickedImage;
+  File? image;
+  // Image ? image;
+  // Image ? pickedImage;
 
   Future pickImage()async{
     try {
@@ -36,16 +37,16 @@ class GalleryScreenState extends State<GalleryScreen>{
         ));
       }
       
-      // setState(() {
-        // final tempImage = File(image.path);
-        // this.image = tempImage;
-      // });
+      setState(() {
+        final tempImage = File(image.path);
+        this.image = tempImage;
+      });
     } on PlatformException catch (e) {
       print("Failed to pick an image: $e");
     }
-    setState(() {
-      pickedImage = image;
-    });
+    // setState(() {
+    //   pickedImage = image;
+    // });
     }
 
 
