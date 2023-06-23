@@ -14,16 +14,25 @@ import 'package:flutter_tts/flutter_tts.dart';
 
 class CaptionGenerator extends StatefulWidget {
 
-  const CaptionGenerator({Key? key, required this.imageBytes, this.rotateImage = false,required this.previousPage}) : super(key: key);
+  const CaptionGenerator({
+    Key? key,
+    required this.imageBytes,
+    required this.autoCapture,
+    this.rotateImage = false,
+    this.cropImage = false,
+  }) : super(key: key);
+
   final Uint8List imageBytes;
   final bool rotateImage;
-  final bool previousPage;
+  final bool cropImage;
+  final bool autoCapture;
+
   @override
   State<CaptionGenerator> createState() => _CaptionGeneratorState();
 }
 
 class _CaptionGeneratorState extends State<CaptionGenerator> {
- late final bool previousPage = widget.previousPage;
+ late final bool autoCapture = widget.autoCapture;
 
   void _generateCaption() async {
     Encoder encoder = await Encoder.instance;
@@ -31,7 +40,12 @@ class _CaptionGeneratorState extends State<CaptionGenerator> {
     String? caption;
 
 
-    ByteBuffer? features = await encoder.predict(widget.imageBytes, widget.rotateImage);
+    ByteBuffer? features = await encoder.predict(
+                                          widget.imageBytes,
+                                          widget.rotateImage,
+                                          widget.cropImage
+                                      );
+
     if (features != null) {
       caption = await decoder.predict(features);
     }
@@ -54,7 +68,7 @@ class _CaptionGeneratorState extends State<CaptionGenerator> {
                   image: image,
                   caption: caption!,
                   rotateImage: widget.rotateImage,
-                  previousPage: previousPage,
+                  previousPage: autoCapture,
                 )
             )
         );

@@ -27,14 +27,22 @@ class WifiStreamState extends State<WifiStream> {
   double newVideoSizeWidth = 640;
   double newVideoSizeHeight = 480;
 
+  bool autoCapture = true;
+  late Timer timer;
+
   final _globalKey = GlobalKey();
+
+
 
   @override
   void initState() {
-    Timer(const Duration(seconds: 10), ()  async{
-      await takeScreenShot();
-    });
     super.initState();
+    print("AutoCapture: $autoCapture");
+    if (autoCapture) {
+      timer = Timer.periodic(const Duration(seconds: 10), (timer)  async{
+        await takeScreenShot();
+      });
+    }
   }
 
   @override
@@ -135,18 +143,48 @@ class WifiStreamState extends State<WifiStream> {
                     height: 100,
                   ),
                   Container(
-                    height: MediaQuery.of(context).size.height * 0.20,
+                    height: MediaQuery.of(context).size.height * 0.17,
                     width: double.infinity,
                     decoration: const BoxDecoration(
                         borderRadius: BorderRadius.vertical(top: Radius.circular(24)),
                         color: Colors.black),
                     child:
-                    IconButton(
-                      onPressed: takeScreenShot,
-                      iconSize: 50,
-                      padding: EdgeInsets.zero,
-                      constraints: const BoxConstraints(),
-                      icon: const Icon(Icons.circle, color: Colors.white),
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: [
+                        IconButton(
+                          onPressed: takeScreenShot,
+                          iconSize: 50,
+                          padding: EdgeInsets.zero,
+                          constraints: const BoxConstraints(),
+                          icon: const Icon(Icons.circle, color: Colors.white),
+                        ),
+                        SwitchListTile(
+                            title: const Text(
+                              'Auto Capture',
+                              style: TextStyle(
+                                  fontFamily: "Nunito",
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.bold
+                              ),
+                            ),
+                            value: autoCapture,
+                            onChanged: (bool value) {
+                              print(value);
+                              if (value) {
+                                timer = Timer.periodic(const Duration(seconds: 10), (timer)  async{
+                                  await takeScreenShot();
+                                });
+                              } else {
+                               timer.cancel();
+                              }
+                              setState(() {
+                                autoCapture = value;
+                              });
+                            }
+                        )
+                      ],
+
                     ),
                   ),
                 ],
@@ -163,16 +201,13 @@ class WifiStreamState extends State<WifiStream> {
     final ui.Image image = await boundary.toImage();
     var byteData = await image.toByteData(format: ui.ImageByteFormat.png);
     var pngBytes = byteData!.buffer.asUint8List();
-    // Image img = Image.memory(
-    //   pngBytes!,
-    //   fit: BoxFit.fitWidth,
-    //   width: image.width.toDouble(),
-    //   height: image.height.toDouble(),
-    // );
 
     if (mounted) {
       Navigator.of(context)
-          .push(SlideAnimation(beginX: 1, page: CaptionGenerator(imageBytes: pngBytes, rotateImage: true,previousPage: true,)));
+          .push(SlideAnimation(
+            beginX: 1,
+            page: CaptionGenerator(imageBytes: pngBytes, rotateImage: true, autoCapture: autoCapture)
+      ));
     }
 
   }

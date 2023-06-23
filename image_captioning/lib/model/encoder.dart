@@ -41,10 +41,10 @@ class Encoder {
   Future<void> _loadModel() async {
     try {
       _interpreter =
-          await Interpreter.fromAsset(
-            modelFileName,
-            options: InterpreterOptions()..threads = 4,
-          );
+      await Interpreter.fromAsset(
+        modelFileName,
+        options: InterpreterOptions()..threads = 4,
+      );
 
       var outputTensors = _interpreter?.getOutputTensors();
       _outputShapes = [];
@@ -58,11 +58,14 @@ class Encoder {
   }
 
   /// Pre-process the image
-  Future<TensorBuffer?> _getProcessedImage(Uint8List imageBytes, bool rotateImage) async {
+  Future<TensorBuffer?> _getProcessedImage(Uint8List imageBytes, bool rotateImage, bool cropImage) async {
 
     imageLib.Image? image = imageLib.decodeImage(imageBytes);
     if (rotateImage) {
       image = imageLib.copyRotate(image!, -90);
+    }
+    if (cropImage) {
+      image = imageLib.copyCrop(image!, 0, 0, image.width, image.width);
     }
 
     if (image == null) {
@@ -94,7 +97,7 @@ class Encoder {
   }
 
   /// Runs object detection on the input image
-  Future<ByteBuffer?> predict(Uint8List imageBytes, bool rotateImage) async {
+  Future<ByteBuffer?> predict(Uint8List imageBytes, bool rotateImage, bool cropImage) async {
 
     if (_interpreter == null) {
       print("Interpreter not initialized");
@@ -102,7 +105,7 @@ class Encoder {
     }
 
     // Pre-process input image to get input TensorBuffer
-    TensorBuffer? inputBuffer = await _getProcessedImage(imageBytes, rotateImage);
+    TensorBuffer? inputBuffer = await _getProcessedImage(imageBytes, rotateImage, cropImage);
     if (inputBuffer == null) {
       return null;
     }

@@ -21,7 +21,6 @@ class CameraPage extends StatefulWidget {
 class _CameraPageState extends State<CameraPage> {
   late CameraController _cameraController;
   bool _isRearCameraSelected = true;
-  late int time = 10;
 
   @override
   void dispose() {
@@ -35,9 +34,6 @@ class _CameraPageState extends State<CameraPage> {
 
   @override
   void initState() {
-    Timer.periodic(Duration(seconds: time), (timer)  async{
-      await takePicture();
-    });
     super.initState();
     SystemChrome.setEnabledSystemUIMode(
         SystemUiMode.manual,
@@ -59,7 +55,7 @@ class _CameraPageState extends State<CameraPage> {
       Uint8List pngBytes = await picture.readAsBytes();
       if (mounted) {
         Navigator.of(context).push(SlideAnimation(
-            beginX: 1, page: CaptionGenerator(imageBytes: pngBytes,previousPage: false,)));
+            beginX: 1, page: CaptionGenerator(imageBytes: pngBytes, autoCapture: false)));
       }
     } on CameraException catch (e) {
       debugPrint('Error occured while taking picture: $e');
