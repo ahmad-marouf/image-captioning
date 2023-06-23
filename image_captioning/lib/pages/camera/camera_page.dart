@@ -59,7 +59,7 @@ class _CameraPageState extends State<CameraPage> {
       Uint8List pngBytes = await picture.readAsBytes();
       if (mounted) {
         Navigator.of(context).push(SlideAnimation(
-            beginX: 1, page: CaptionGenerator(imageBytes: pngBytes)));
+            beginX: 1, page: CaptionGenerator(imageBytes: pngBytes,previousPage: 'camera',)));
       }
     } on CameraException catch (e) {
       debugPrint('Error occured while taking picture: $e');

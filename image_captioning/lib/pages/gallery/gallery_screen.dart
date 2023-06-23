@@ -33,7 +33,7 @@ class GalleryScreenState extends State<GalleryScreen>{
       Uint8List pngBytes = await image.readAsBytes();
       if (mounted) {
         Navigator.of(context).pushReplacement(SlideAnimation(
-            beginX: 1, page: CaptionGenerator(imageBytes: pngBytes)
+            beginX: 1, page: CaptionGenerator(imageBytes: pngBytes,previousPage: 'gallery',)
         ));
       }
       

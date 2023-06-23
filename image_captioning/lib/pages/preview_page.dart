@@ -14,16 +14,16 @@ import 'package:flutter_tts/flutter_tts.dart';
 
 class CaptionGenerator extends StatefulWidget {
 
-  const CaptionGenerator({Key? key, required this.imageBytes, this.rotateImage = false}) : super(key: key);
-
+  const CaptionGenerator({Key? key, required this.imageBytes, this.rotateImage = false,required this.previousPage}) : super(key: key);
   final Uint8List imageBytes;
   final bool rotateImage;
-
+  final String previousPage;
   @override
   State<CaptionGenerator> createState() => _CaptionGeneratorState();
 }
 
 class _CaptionGeneratorState extends State<CaptionGenerator> {
+ late final String previousPage = widget.previousPage;
 
   void _generateCaption() async {
     Encoder encoder = await Encoder.instance;
@@ -54,6 +54,7 @@ class _CaptionGeneratorState extends State<CaptionGenerator> {
                   image: image,
                   caption: caption!,
                   rotateImage: widget.rotateImage,
+                  previousPage: previousPage,
                 )
             )
         );
@@ -89,13 +90,13 @@ class _CaptionGeneratorState extends State<CaptionGenerator> {
 
 class PreviewPage extends StatelessWidget {
 
-  PreviewPage({Key? key, required this.image, required this.caption, required this.rotateImage}) : super(key: key);
+  PreviewPage({Key? key, required this.image, required this.caption, required this.rotateImage,required this.previousPage}) : super(key: key);
 
   final Image image;
   final String caption;
+  final String previousPage;
   final FlutterTts flutterTts = FlutterTts();
   bool rotateImage;
-
 
   _playSound(var context) async {
 
@@ -108,7 +109,9 @@ class PreviewPage extends StatelessWidget {
     }
 
     await future();
-    Timer(Duration(seconds: 3), () { Navigator.pop(context);});
+    if(previousPage == 'external device') {
+      Timer(const Duration(seconds: 3), () { Navigator.pop(context);});
+    }
   }
 
   @override

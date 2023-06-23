@@ -9,9 +9,11 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c0cf96fa-60fe-4e56-b251-04010795af08" name="Changes" comment="autocaption">
+    <list default="true" id="c0cf96fa-60fe-4e56-b251-04010795af08" name="Changes" comment="autocaption part 2">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_captioning/lib/external_connection/wifi_stream.dart" beforeDir="false" afterPath="$PROJECT_DIR$/image_captioning/lib/external_connection/wifi_stream.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/image_captioning/lib/pages/camera/camera_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/image_captioning/lib/pages/camera/camera_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_captioning/lib/pages/gallery/gallery_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/image_captioning/lib/pages/gallery/gallery_screen.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/image_captioning/lib/pages/preview_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/image_captioning/lib/pages/preview_page.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -245,7 +247,14 @@
       <option name="project" value="LOCAL" />
       <updated>1687523915631</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="autocaption part 2">
+      <created>1687526958648</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1687526958648</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -280,6 +289,7 @@
     <MESSAGE value="change the name of the application to &quot;ICG&quot; ( Image caption generator)" />
     <MESSAGE value="change model" />
     <MESSAGE value="autocaption" />
-    <option name="LAST_COMMIT_MESSAGE" value="autocaption" />
+    <MESSAGE value="autocaption part 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="autocaption part 2" />
   </component>
 </project>
