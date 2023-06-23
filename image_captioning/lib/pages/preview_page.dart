@@ -17,13 +17,13 @@ class CaptionGenerator extends StatefulWidget {
   const CaptionGenerator({Key? key, required this.imageBytes, this.rotateImage = false,required this.previousPage}) : super(key: key);
   final Uint8List imageBytes;
   final bool rotateImage;
-  final String previousPage;
+  final bool previousPage;
   @override
   State<CaptionGenerator> createState() => _CaptionGeneratorState();
 }
 
 class _CaptionGeneratorState extends State<CaptionGenerator> {
- late final String previousPage = widget.previousPage;
+ late final bool previousPage = widget.previousPage;
 
   void _generateCaption() async {
     Encoder encoder = await Encoder.instance;
@@ -94,7 +94,7 @@ class PreviewPage extends StatelessWidget {
 
   final Image image;
   final String caption;
-  final String previousPage;
+  final bool previousPage;
   final FlutterTts flutterTts = FlutterTts();
   bool rotateImage;
 
@@ -109,7 +109,7 @@ class PreviewPage extends StatelessWidget {
     }
 
     await future();
-    if(previousPage == 'external device') {
+    if(previousPage) {
       Timer(const Duration(seconds: 3), () { Navigator.pop(context);});
     }
   }

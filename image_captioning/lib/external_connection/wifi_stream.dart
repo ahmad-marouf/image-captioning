@@ -172,7 +172,7 @@ class WifiStreamState extends State<WifiStream> {
 
     if (mounted) {
       Navigator.of(context)
-          .push(SlideAnimation(beginX: 1, page: CaptionGenerator(imageBytes: pngBytes, rotateImage: true,previousPage: 'external device',)));
+          .push(SlideAnimation(beginX: 1, page: CaptionGenerator(imageBytes: pngBytes, rotateImage: true,previousPage: true,)));
     }
 
   }
