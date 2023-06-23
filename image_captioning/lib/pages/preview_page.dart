@@ -95,6 +95,7 @@ class PreviewPage extends StatelessWidget {
   final FlutterTts flutterTts = FlutterTts();
   bool rotateImage;
 
+
   _playSound() async {
     await flutterTts.setLanguage("en-US");
     await flutterTts.setVolume(0.5);
@@ -102,7 +103,6 @@ class PreviewPage extends StatelessWidget {
     await flutterTts.setPitch(1);
     await flutterTts.speak(caption);
   }
-
 
   @override
   Widget build(BuildContext context) {

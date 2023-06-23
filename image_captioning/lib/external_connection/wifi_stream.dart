@@ -31,6 +31,9 @@ class WifiStreamState extends State<WifiStream> {
 
   @override
   void initState() {
+    Timer(const Duration(seconds: 10), ()  async{
+      await takeScreenShot();
+    });
     super.initState();
   }
 

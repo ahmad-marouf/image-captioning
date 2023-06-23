@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
@@ -19,6 +21,7 @@ class CameraPage extends StatefulWidget {
 class _CameraPageState extends State<CameraPage> {
   late CameraController _cameraController;
   bool _isRearCameraSelected = true;
+  late int time = 10;
 
   @override
   void dispose() {
@@ -32,6 +35,9 @@ class _CameraPageState extends State<CameraPage> {
 
   @override
   void initState() {
+    /*Timer(Duration(seconds: time), ()  async{
+      await takePicture();
+    });*/
     super.initState();
     SystemChrome.setEnabledSystemUIMode(
         SystemUiMode.manual,

@@ -6,8 +6,6 @@ import 'package:image_captioning/pages/Home/side_bar_screen.dart';
 import 'package:image_captioning/components/slideAnimation.dart';
 import 'package:rive/rive.dart';
 import '../../external_connection/esp_wifi.dart';
-import '../../model/decoder.dart';
-import '../../model/encoder.dart';
 import '../camera/camera_page.dart';
 import 'package:camera/camera.dart';
 import '../gallery/gallery_screen.dart';
@@ -23,8 +21,6 @@ class _HomeState extends State<HomeState> with TickerProviderStateMixin{
   late final AnimationController _controller;
   late final Animation<double> _animation;
   DateTime? _currentBackPressTime;
- /* late Encoder encoder;
-  late Decoder decoder;*/
 
   @override
   Widget build(BuildContext context) => WillPopScope(
@@ -48,13 +44,6 @@ class _HomeState extends State<HomeState> with TickerProviderStateMixin{
 
   @override
   void initState(){
-    /*
-      encoder = () async{
-        await Encoder.instance;
-      } as Encoder;
-      decoder = () async{
-        await Decoder.instance;
-      } as Decoder;*/
 
     _controller = AnimationController(
       duration: const Duration(milliseconds: 500),
@@ -104,26 +93,6 @@ class HomeScene extends StatelessWidget {
         elevation: 0,
         shadowColor: Colors.transparent,
         backgroundColor: Colors.transparent,
-        /*actions: [
-          IconButton(
-            onPressed: () {
-              showDialog(
-                  context: context,
-                  builder: (context) => AlertDialog(
-                        title: const Text('my title'),
-                        content: const Text('the body of the help icon'),
-                        actions: [
-                          TextButton(
-                              onPressed: () => Navigator.pop(context),
-                              child: const Text('OK'))
-                        ],
-                      ));
-            },
-            icon: const Icon(Icons.question_mark),
-            color: Colors.white,
-            tooltip: 'HELP',
-          )
-        ],*/
       ),
       body: Stack(
           fit: StackFit.expand,
