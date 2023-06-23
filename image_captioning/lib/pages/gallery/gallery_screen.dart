@@ -6,7 +6,6 @@ import 'package:flutter/services.dart';
 import 'package:image_captioning/pages/preview_page.dart';
 import 'package:image_captioning/components/shared_components.dart';
 import 'package:image_captioning/components/slideAnimation.dart';
-import 'package:image_cropper/image_cropper.dart';
 import 'package:image_picker/image_picker.dart';
 
 
@@ -17,8 +16,6 @@ class GalleryScreen extends StatefulWidget{
 
 class GalleryScreenState extends State<GalleryScreen>{
   File? image;
-  // Image ? image;
-  // Image ? pickedImage;
 
   Future pickImage()async{
     try {
@@ -36,17 +33,10 @@ class GalleryScreenState extends State<GalleryScreen>{
             beginX: 1, page: CaptionGenerator(imageBytes: pngBytes, autoCapture: false)
         ));
       }
-      
-      setState(() {
-        final tempImage = File(image.path);
-        this.image = tempImage;
-      });
+
     } on PlatformException catch (e) {
       print("Failed to pick an image: $e");
     }
-    // setState(() {
-    //   pickedImage = image;
-    // });
     }
 
 
@@ -60,11 +50,6 @@ class GalleryScreenState extends State<GalleryScreen>{
       backgroundColor: Colors.grey[900],
       body:  Center(
           child: loader()
-        /*LoadingFilling.square(
-            borderColor: Colors.teal,
-            size: 100,
-          )*/
-
       ),
     );
   }
