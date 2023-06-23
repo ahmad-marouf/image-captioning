@@ -65,7 +65,8 @@ class Encoder {
       image = imageLib.copyRotate(image!, -90);
     }
     if (cropImage) {
-      image = imageLib.copyCrop(image!, 0, 0, image.width, image.width);
+      int startY = ((image!.height - image.width) / 2).round();
+      image = imageLib.copyCrop(image, 0, startY, image.width, image.width);
     }
 
     if (image == null) {

@@ -51,11 +51,16 @@ class _CaptionGeneratorState extends State<CaptionGenerator> {
     }
 
     imageLib.Image? img = imageLib.decodeImage(widget.imageBytes);
+    if (widget.cropImage) {
+      int startY = ((img!.height - img.width) / 2).round();
+      img = imageLib.copyCrop(img, 0, startY, img.width, img.width);
+    }
+    Uint8List list = Uint8List.fromList(imageLib.encodePng(img!));
     Image image = Image.memory(
-      widget.imageBytes,
+      list,
       fit: BoxFit.fitWidth,
-      width: img?.width.toDouble(),
-      height: img?.height.toDouble(),
+      width: img.width.toDouble(),
+      height: img.height.toDouble(),
     );
 
 
@@ -145,7 +150,7 @@ class PreviewPage extends StatelessWidget {
               flex: 4,
               child: Transform.rotate(
                 angle: rotateImage ? -pi/2 : 0,
-                child: SizedBox(
+                child: Container(
                   width: double.infinity,
                   child: InnerShadow(
                     shadows: const [

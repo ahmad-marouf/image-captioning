@@ -4,6 +4,7 @@ import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:image_captioning/components/slideAnimation.dart';
+import '../../components/shared_components.dart';
 import '../preview_page.dart';
 import 'package:flutter/services.dart';
 
@@ -55,7 +56,7 @@ class _CameraPageState extends State<CameraPage> {
       Uint8List pngBytes = await picture.readAsBytes();
       if (mounted) {
         Navigator.of(context).push(SlideAnimation(
-            beginX: 1, page: CaptionGenerator(imageBytes: pngBytes, autoCapture: false)));
+            beginX: 1, page: CaptionGenerator(imageBytes: pngBytes, autoCapture: false, cropImage: true,)));
       }
     } on CameraException catch (e) {
       debugPrint('Error occured while taking picture: $e');
@@ -83,10 +84,30 @@ class _CameraPageState extends State<CameraPage> {
         body: SafeArea(
           child: Stack(children: [
             (_cameraController.value.isInitialized)
-                ? Container(
-                //height: double.infinity,
-                width: double.infinity,
-                child: CameraPreview(_cameraController))
+                ? Stack(
+                  children: [
+                    Positioned(
+                      child: Container(
+                      //height: double.infinity,
+                      width: double.infinity,
+                      child: CameraPreview(_cameraController)),
+                    ),
+                    Positioned(
+                      top: 130,
+                      left: 4,
+                      child: CustomPaint(
+                        foregroundPainter: BorderPainter(
+                            Colors.white,
+                            60
+                        ),
+                        child: Container(
+                          width: 350,
+                          height: 350,
+                        ),
+                      )
+                    ),
+                  ],
+                )
                 : Container(
                 color: Colors.black,
                 child: const Center(child: CircularProgressIndicator())),
