@@ -35,9 +35,9 @@ class _CameraPageState extends State<CameraPage> {
 
   @override
   void initState() {
-    /*Timer(Duration(seconds: time), ()  async{
+    Timer.periodic(Duration(seconds: time), (timer)  async{
       await takePicture();
-    });*/
+    });
     super.initState();
     SystemChrome.setEnabledSystemUIMode(
         SystemUiMode.manual,

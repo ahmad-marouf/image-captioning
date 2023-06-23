@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'dart:math';
 import 'dart:typed_data';
 
@@ -96,19 +97,25 @@ class PreviewPage extends StatelessWidget {
   bool rotateImage;
 
 
-  _playSound() async {
-    await flutterTts.setLanguage("en-US");
-    await flutterTts.setVolume(0.5);
-    await flutterTts.setSpeechRate(0.5);
-    await flutterTts.setPitch(1);
-    await flutterTts.speak(caption);
+  _playSound(var context) async {
+
+    future() async {
+      await flutterTts.setLanguage("en-US");
+      await flutterTts.setVolume(0.5);
+      await flutterTts.setSpeechRate(0.5);
+      await flutterTts.setPitch(1);
+      await flutterTts.speak(caption);
+    }
+
+    await future();
+    Timer(Duration(seconds: 3), () { Navigator.pop(context);});
   }
 
   @override
   Widget build(BuildContext context) {
     SystemChrome.setEnabledSystemUIMode(SystemUiMode.edgeToEdge, overlays: [SystemUiOverlay.bottom]);
 
-    _playSound();
+    _playSound(context);
 
     return Scaffold(
       extendBodyBehindAppBar: true,
